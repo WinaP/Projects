@@ -49,7 +49,36 @@
     "features": [
       "Custom PCB design and manufacturing",
       "Sensor integration and motor control",
-      "Embedded C programming",
+      "Embedded C/C++ programming",
+      "Control algorithm development",
+      "Mechanical prototyping and optimisation"
+    ],
+    "github": null,
+    "demo": null
+  },
+
+  {
+    "id": "robocup_competition",
+    "name": "RoboCup",
+    "subtitle": "Embedded project for autonomous robotics competition",
+    "category": "university",
+    "type": [
+      "software",
+      "electrical",
+      "mechanical"
+    ],
+    "color": "#38B2AC",
+    "year": 2025,
+    "description": "Collaborated in the development of autonomous robots for UC's annual 3rd year RoboCup competition where robots pick up and distinguish between real and fake weights.",
+    "technologies": [
+      "C/C++",
+      "Arduino",
+      "3D CAD"
+    ],
+    "tools": "Arduino IDE, Circuit Simulation, CAD Software",
+    "features": [
+      "Sensor integration and motor control",
+      "Embedded C/C++ programming",
       "Control algorithm development",
       "Mechanical prototyping and optimisation"
     ],
