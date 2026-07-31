@@ -9,41 +9,67 @@ fetch('../data/skills.json')
     buildProficiencyChart(skills);
   });
 
+// ── Get All Skills (Sorted) ──────────────────────────────────
+function getSortedSkills(skillGroups) {
+  const allSkills = [];
+
+  skillGroups.forEach(group => {
+    group.skills.forEach(skill => {
+      allSkills.push({
+        ...skill,
+        type: group.type,
+        color: group.color
+      });
+    });
+  });
+
+  // Highest proficiency first, then alphabetical
+  allSkills.sort((a, b) => {
+    if (b.proficiency !== a.proficiency) {
+      return b.proficiency - a.proficiency;
+    }
+    return a.name.localeCompare(b.name);
+  });
+
+  return allSkills;
+}
+
 
 // ── Skills Timeline ──────────────────────────────────────────
 function buildSkills(skillGroups) {
   const container = document.getElementById("skill-timeline");
   let html = "";
-  skillGroups.forEach(group => {
-    group.skills.forEach(skill => {
-      html += `
-        <div class="skill-item" style="--skill-color:${group.color}">
-          <div class="skill-type">
-            ${group.type}
+
+  const allSkills = getSortedSkills(skillGroups);
+
+  allSkills.forEach(skill => {
+    html += `
+      <div class="skill-item" style="--skill-color:${group.color}">
+        <div class="skill-type">
+          ${group.type}
+        </div>
+        <div class="skill-body">
+          <div class="skill-name">
+            ${skill.name}
           </div>
-          <div class="skill-body">
-            <div class="skill-name">
-              ${skill.name}
+          <div class="skill-summary">
+            ${skill.summary}
+          </div>
+          <div class="proficiency-bar-wrap">
+            <div class="proficiency-row">
+              <span>Proficiency</span>
+              <span>${skill.proficiency}%</span>
             </div>
-            <div class="skill-summary">
-              ${skill.summary}
-            </div>
-            <div class="proficiency-bar-wrap">
-              <div class="proficiency-row">
-                <span>Proficiency</span>
-                <span>${skill.proficiency}%</span>
-              </div>
-              <div class="proficiency-bar">
-                <div
-                  class="proficiency-fill"
-                  style="width:${skill.proficiency}%;background:${getProficiencyColor(skill.proficiency)}">
-                </div>
+            <div class="proficiency-bar">
+              <div
+                class="proficiency-fill"
+                style="width:${skill.proficiency}%;background:${getProficiencyColor(skill.proficiency)}">
               </div>
             </div>
           </div>
         </div>
-      `;
-    });
+      </div>
+    `;
   });
 
   container.innerHTML = html;
@@ -67,23 +93,7 @@ function getProficiencyColor(value) {
 
 // ── Proficiency Chart ────────────────────────────────────────
 function buildProficiencyChart(skillGroups) {
-  const allSkills = [];
-  skillGroups.forEach(group => {
-    group.skills.forEach(skill => {
-      allSkills.push({
-        name: skill.name,
-        proficiency: skill.proficiency,
-        color: getProficiencyColor(skill.proficiency)
-      });
-    });
-  });
-
-  allSkills.sort((a, b) => {
-    if (b.proficiency !== a.proficiency) {
-      return b.proficiency - a.proficiency;
-    }
-    return a.name.localeCompare(b.name);
-  });
+  const allSkills = getSortedSkills(skillGroups);
 
   const canvas = document.getElementById("proficiency-chart");
   if (!canvas) return;
