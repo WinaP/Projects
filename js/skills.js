@@ -56,10 +56,10 @@ function getProficiencyColor(value) {
     return "#F56565"; // Advanced
   }
   if (value >= 70) {
-    return "#38B2AC"; // Proficient
+    return "#ED64A6"; // Proficient
   }
   if (value >= 45) {
-    return "#D69E2E"; // Intermediate
+    return "#9F7918"; // Intermediate
   }
   return "#718096"; // Learning
 }
