@@ -78,6 +78,13 @@ function buildProficiencyChart(skillGroups) {
     });
   });
 
+  allSkills.sort((a, b) => {
+    if (b.proficiency !== a.proficiency) {
+      return b.proficiency - a.proficiency;
+    }
+    return a.name.localeCompare(b.name);
+  });
+
   const canvas = document.getElementById("proficiency-chart");
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
