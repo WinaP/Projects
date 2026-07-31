@@ -3,15 +3,16 @@
 // ============================================================
 
 const CATEGORY_LABEL = {
-  'university':        'University',
-  'personal':          'Personal',
-  'software':          'Software',
-  'web development':   'Web Development',
-  'electrical':        'Electrical',
-  'embedded systems':  'Embedded Systems',
-  'robotics':          'Robotics',
-  'automation':        'Automation',
-  'mechanical':        'Mechanical',
+  'university': 'University',
+  'personal': 'Personal',
+};
+
+const TYPE_LABEL = {
+  'web': 'Web',
+  'software': 'Software',
+  'electrical': 'Electrical',
+  'mechanical': 'Mechanical',
+  'mixture': 'Mixture',
 };
 
 const TECH_TAG = {
@@ -66,6 +67,12 @@ function buildCards(filter) {
       <div class="project-category">
         ${CATEGORY_LABEL[project.category?.toLowerCase()] || project.category || ''}
       </div>
+      
+      ${project.type ? 
+        `<div class="project-type">
+          ${TYPE_LABEL[project.type.toLowerCase()] || project.type}
+        </div>` 
+        : ''}
 
       <div class="project-desc">
         ${project.description || ''}
@@ -135,6 +142,10 @@ function openDetail(project) {
       margin-bottom:1.2rem">
 
       ${CATEGORY_LABEL[project.category?.toLowerCase()] || project.category || ''}
+      
+      ${project.type ? 
+        ` · ${TYPE_LABEL[project.type.toLowerCase()] || project.type}` 
+        : ''}
 
     </div>
 
