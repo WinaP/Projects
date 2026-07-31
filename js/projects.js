@@ -14,6 +14,13 @@ const TYPE_LABEL = {
   'mechanical': 'Mechanical',
 };
 
+const TYPE_COLOR = {
+  'web': '#4299E1',
+  'software': '#9F7AEA',
+  'electrical': '#48BB78',
+  'mechanical': '#F6AD55'
+};
+
 const TECH_TAG = {
   // Programming
   'C/C++': '<span class="tag">C/C++</span>',
@@ -144,14 +151,16 @@ function buildCards(filter) {
 
         ${
           (project.type || [])
-          .map(type =>
-            `
-            <span class="tag"
-            style="background:${project.color}22;color:${project.color}">
-              ${TYPE_LABEL[type.toLowerCase()] || type}
-            </span>
-            `
-          )
+          .map(type => {
+            const typeColor = TYPE_COLOR[type.toLowerCase()] || '#9F7AEA';
+          
+            return `
+              <span class="tag"
+              style="background:${typeColor}22;color:${typeColor}">
+                ${TYPE_LABEL[type.toLowerCase()] || type}
+              </span>
+            `;
+          })
           .join('')
         }
 
