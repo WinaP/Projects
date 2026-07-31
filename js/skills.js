@@ -150,6 +150,7 @@ function buildProficiencyChart(skillGroups) {
         H - 12
       );
     }
+  );
 
   // baseline
   ctx.beginPath();
