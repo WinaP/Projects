@@ -30,7 +30,10 @@
     "name": "Arduino Embedded System",
     "subtitle": "Microcontroller-based engineering project",
     "category": "university",
-    "type": "Mixture",
+    "type": [
+      "software",
+      "electrical",
+    ],
     "color": "#38B2AC",
     "year": 2025,
     "description": "An embedded systems project combining hardware integration and software programming. Developed using a microcontroller to interface with sensors, process data, and perform real-time control.",
