@@ -201,7 +201,11 @@ a { color: inherit; text-decoration: none; }
 /* ══════════════════════════════════════════════════════════════
    SKILLS (skills.html)
    ══════════════════════════════════════════════════════════════ */
-.skills-layout { display: grid; grid-template-columns: 1fr 270px; gap: 2rem; align-items: start; }
+/* Top chart area */
+.skill-chart-sticky { position: sticky; top: 70px; z-index: 50;
+  background: var(--bg); padding-bottom: 1.5rem; margin-bottom: 1.5rem; }
+.skill-chart-sticky .card { width: 100%; }
+#proficiency-chart { width: 100%; height: 250px; display: block; }
 .skill-timeline { position: relative; }
 .skill-timeline::before {
   content: ''; position: absolute; left: 82px; top: 0; bottom: 0;
@@ -217,13 +221,11 @@ a { color: inherit; text-decoration: none; }
 .skill-body { padding-left: 0.5rem; }
 .skill-name { font-family: 'Cormorant Garamond', serif; font-size: 1.08rem; font-weight: 600; color: var(--text); margin-bottom: 0.35rem; }
 .skill-summary { font-size: 0.81rem; color: var(--text-muted); line-height: 1.55; }
+.skill-tags { margin-top: 0.5rem; }
 .proficiency-bar-wrap { margin-top: 0.45rem; }
 .proficiency-row { display: flex; justify-content: space-between; font-size: 0.6rem; color: var(--text-faint); margin-bottom: 0.15rem; }
 .proficiency-bar { height: 3px; border-radius: 2px; background: var(--border); overflow: hidden; }
 .proficiency-fill { height: 100%; border-radius: 2px; }
-
-/* sidebar chart */
-.chart-sidebar { position: sticky; top: 80px; }
 
 /* ══════════════════════════════════════════════════════════════
    FOOTER
