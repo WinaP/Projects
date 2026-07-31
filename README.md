@@ -15,7 +15,7 @@ projectsportfolio/
 │
 ├── pages/
 │   ├── projects.html            ← Project showcase and details
-│   ├── about.html               ← Skills, background, and experience 
+│   ├── skills.html              ← Skills and proficiency 
 │   ├── contact.html             ← Contact information and form
 │
 ├── css/
@@ -28,7 +28,7 @@ projectsportfolio/
 │
 └── js/
     ├── projects.js              ← Logic for projects.html
-    ├── about.js                 ← Logic for about.html
+    ├── skills.js                 ← Logic for skills.html
     ├── contact.js               ← Logic for contact.html
 ```
 
