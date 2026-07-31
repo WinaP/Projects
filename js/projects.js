@@ -15,12 +15,12 @@ const CATEGORY_LABEL = {
 };
 
 const TECH_TAG = {
-  'HTML':       '<span class="tag tag-html">HTML</span>',
-  'CSS':        '<span class="tag tag-css">CSS</span>',
-  'JavaScript': '<span class="tag tag-js">JavaScript</span>',
-  'Python':     '<span class="tag tag-python">Python</span>',
-  'C++':        '<span class="tag tag-cpp">C++</span>',
-  'Arduino':    '<span class="tag tag-arduino">Arduino</span>',
+  'HTML':       '<span class="tag">HTML</span>',
+  'CSS':        '<span class="tag">CSS</span>',
+  'JavaScript': '<span class="tag">JavaScript</span>',
+  'Python':     '<span class="tag">Python</span>',
+  'C++':        '<span class="tag">C++</span>',
+  'Arduino':    '<span class="tag">Arduino</span>',
   '3D CAD':     '<span class="tag">3D CAD</span>',
 };
 
