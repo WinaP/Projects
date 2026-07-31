@@ -21,10 +21,10 @@ const TECH_TAG = {
   'Python':     '<span class="tag tag-python">Python</span>',
   'C++':        '<span class="tag tag-cpp">C++</span>',
   'Arduino':    '<span class="tag tag-arduino">Arduino</span>',
-  '3D CAD':        '<span class="tag">3D CAD</span>',
+  '3D CAD':     '<span class="tag">3D CAD</span>',
 };
 
-let ALL_PROJECTS = {};   // keyed by id after fetch
+let ALL_PROJECTS = {};
 
 
 // ── Fetch & boot ─────────────────────────────────────────────
@@ -58,15 +58,28 @@ function buildCards(filter) {
 
     card.innerHTML = `
       <div class="project-name">${project.name}</div>
-      ${project.subtitle ? `<div class="project-subtitle">${project.subtitle}</div>` : ''}
+
+      ${project.subtitle ? 
+        `<div class="project-subtitle">${project.subtitle}</div>` 
+        : ''}
+
       <div class="project-category">
         ${CATEGORY_LABEL[project.category?.toLowerCase()] || project.category || ''}
       </div>
-      <div class="project-desc">${project.description || ''}</div>
+
+      <div class="project-desc">
+        ${project.description || ''}
+      </div>
+
       <div class="project-tags">
         ${(project.technologies || []).map(t => TECH_TAG[t] || '').join('')}
-        ${project.year ? `<span class="tag" style="background:rgba(255,255,255,0.05);color:var(--text-faint)">${project.year}</span>` : ''}
-      </div>`;
+        ${project.year ? 
+          `<span class="tag" style="background:rgba(255,255,255,0.05);color:var(--text-faint)">
+            ${project.year}
+          </span>` 
+          : ''}
+      </div>
+    `;
 
     card.addEventListener('click', () => openDetail(project));
     grid.appendChild(card);
@@ -77,40 +90,98 @@ function buildCards(filter) {
 // ── Detail panel ──────────────────────────────────────────────
 function openDetail(project) {
 
-  const techHTML = (project.technologies || []).map(t =>
-    TECH_TAG[t] || ''
-  ).join('');
+  const techHTML = (project.technologies || [])
+    .map(t => TECH_TAG[t] || '')
+    .join('');
 
 
-  const featureHTML = (project.features || []).map(f =>
-    `<li>${f}</li>`
-  ).join('');
+  const featureHTML = (project.features || [])
+    .map(feature =>
+      `<span style="display:inline-block;margin:0.2rem 0.25rem;padding:0.2rem 0.55rem;
+       background:var(--bg-hover);border:1px solid var(--border);border-radius:4px;
+       font-size:0.75rem;color:var(--text-muted)">
+       ${feature}
+       </span>`
+    )
+    .join('');
 
 
   document.getElementById('detail-content').innerHTML = `
+
     <div style="margin-bottom:0.4rem;margin-top:0.2rem">
       ${techHTML}
     </div>
 
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;margin-bottom:0.15rem;color:${project.color || 'var(--text)'}">
+    <h2 style="font-family:'Cormorant Garamond',serif;
+      font-size:1.8rem;
+      margin-bottom:0.15rem;
+      color:${project.color || 'var(--text)'}">
       ${project.name}
     </h2>
 
-    ${project.subtitle ? `<div style="font-style:italic;color:var(--text-muted);font-size:0.88rem;margin-bottom:0.7rem">${project.subtitle}</div>` : ''}
 
-    <div style="font-size:0.63rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-faint);margin-bottom:1.2rem">
+    ${project.subtitle ? 
+      `<div style="font-style:italic;color:var(--text-muted);
+      font-size:0.88rem;margin-bottom:0.7rem">
+      ${project.subtitle}
+      </div>` 
+      : ''}
+
+
+    <div style="font-size:0.63rem;
+      text-transform:uppercase;
+      letter-spacing:0.06em;
+      color:var(--text-faint);
+      margin-bottom:1.2rem">
+
       ${CATEGORY_LABEL[project.category?.toLowerCase()] || project.category || ''}
+
     </div>
 
-    ${project.description ? `<div class="detail-section"><h4>About</h4><p style="font-size:0.85rem">${project.description}</p></div>` : ''}
 
-    ${project.tools ? `<div class="detail-section"><h4>Tools</h4><p style="font-size:0.85rem">${project.tools}</p></div>` : ''}
+    ${project.description ? 
+      `<div class="detail-section">
+        <h4>About</h4>
+        <p style="font-size:0.85rem">${project.description}</p>
+      </div>` 
+      : ''}
 
-    ${featureHTML ? `<div class="detail-section"><h4>Key Features</h4><ul class="moment-list">${featureHTML}</ul></div>` : ''}
 
-    ${project.github ? `<div class="detail-section"><a href="${project.github}" target="_blank">View Repository →</a></div>` : ''}
+    ${project.tools ? 
+      `<div class="detail-section">
+        <h4>Tools</h4>
+        <p style="font-size:0.85rem">${project.tools}</p>
+      </div>` 
+      : ''}
 
-    ${project.demo ? `<div class="detail-section"><a href="${project.demo}" target="_blank">Live Demo →</a></div>` : ''}
+
+    ${featureHTML ? 
+      `<div class="detail-section">
+        <h4>Key Features</h4>
+        <div style="margin-top:0.2rem">
+          ${featureHTML}
+        </div>
+      </div>` 
+      : ''}
+
+
+    ${project.github ? 
+      `<div class="detail-section">
+        <a href="${project.github}" target="_blank">
+          View Repository →
+        </a>
+      </div>` 
+      : ''}
+
+
+    ${project.demo ? 
+      `<div class="detail-section">
+        <a href="${project.demo}" target="_blank">
+          Live Demo →
+        </a>
+      </div>` 
+      : ''}
+
   `;
 
   document.getElementById('project-detail').classList.add('open');
@@ -119,23 +190,33 @@ function openDetail(project) {
 
 // ── Wiring ────────────────────────────────────────────────────
 function wireFilters() {
-  document.getElementById('project-filters').querySelectorAll('button').forEach(btn => {
-    btn.addEventListener('click', () => {
+  document.getElementById('project-filters')
+    .querySelectorAll('button')
+    .forEach(btn => {
 
-      document.querySelectorAll('#project-filters button')
-        .forEach(b => b.classList.remove('active'));
+      btn.addEventListener('click', () => {
 
-      btn.classList.add('active');
+        document.querySelectorAll('#project-filters button')
+          .forEach(b => b.classList.remove('active'));
 
-      buildCards(btn.dataset.filter);
+        btn.classList.add('active');
+
+        buildCards(btn.dataset.filter);
+
+      });
 
     });
-  });
 }
 
 
 function wireDetailClose() {
-  document.getElementById('detail-close').addEventListener('click', () => {
-    document.getElementById('project-detail').classList.remove('open');
-  });
+  document.getElementById('detail-detail').classList.remove('open');
+
+  document.getElementById('detail-close')
+    .addEventListener('click', () => {
+
+      document.getElementById('project-detail')
+        .classList.remove('open');
+
+    });
 }
