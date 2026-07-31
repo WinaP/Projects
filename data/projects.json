@@ -67,7 +67,7 @@
       "electrical"
     ],
     "color": "#38B2AC",
-    "year": 2025,
+    "year": 2026,
     "description": "Developed an embedded step counter system using microcontroller programming, sensor interfacing, and real-time signal processing techniques.",
     "technologies": [
       "C/C++",
@@ -91,10 +91,10 @@
     "category": "university",
     "type": [
       "electrical",
-      "embedded"
+      "software"
     ],
-    "color": "#48BB78",
-    "year": 2025,
+    "color": "#38B2AC",
+    "year": 2026,
     "description": "Designed and tested a solar power system integrating photovoltaic analysis, DC motor control, and power electronics.",
     "technologies": [
       "LTspice",
@@ -150,7 +150,7 @@
       "software"
     ],
     "color": "#9F7AEA",
-    "year": 2025,
+    "year": 2024,
     "description": "Applied mathematical modelling and programming techniques to process and enhance digital images using matrix-based methods.",
     "technologies": [
       "Python",
@@ -177,7 +177,7 @@
       "electrical"
     ],
     "color": "#38B2AC",
-    "year": 2025,
+    "year": 2026,
     "description": "Collaborated on the design and prototyping of a wearable safety device for remote workers, combining embedded systems, electronics, and product development.",
     "technologies": [
       "C/C++",
