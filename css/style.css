@@ -14,9 +14,9 @@
   --border:       rgba(255,255,255,0.06);
   --border-hover: rgba(255,255,255,0.14);
 
-  --text:         #f0ebe4;
-  --text-muted:   #887e90;
-  --text-faint:   #4a4352;
+  --text:         #F9F7F4;
+  --text-muted:   #E7DFD4;
+  --text-faint:   #D5C7B3;
 
   --radius: 10px;
   --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
