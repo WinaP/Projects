@@ -27,40 +27,9 @@
   },
 
   {
-    "id": "line_following_robot",
-    "name": "Line Following Robot",
-    "subtitle": "Autonomous embedded robotics project",
-    "category": "university",
-    "type": [
-      "software",
-      "electrical",
-      "mechanical"
-    ],
-    "color": "#38B2AC",
-    "year": 2025,
-    "description": "Designed, manufactured, and tested an autonomous line following robot integrating custom PCB hardware, embedded programming, and mechanical prototyping.",
-    "technologies": [
-      "C/C++",
-      "Arduino",
-      "KiCad",
-      "3D CAD"
-    ],
-    "tools": "Arduino IDE, KiCad, Circuit Simulation, CAD Software",
-    "features": [
-      "Custom PCB design and manufacturing",
-      "Sensor integration and motor control",
-      "Embedded C programming",
-      "Control algorithm development",
-      "Mechanical prototyping and optimisation"
-    ],
-    "github": null,
-    "demo": null
-  },
-
-  {
-    "id": "step_counter",
-    "name": "Embedded Step Counter",
-    "subtitle": "Microcontroller-based signal processing system",
+    "id": "arduino_project",
+    "name": "Arduino Embedded System",
+    "subtitle": "Microcontroller-based engineering project",
     "category": "university",
     "type": [
       "software",
@@ -68,45 +37,68 @@
     ],
     "color": "#38B2AC",
     "year": 2025,
-    "description": "Developed an embedded step counter system using microcontroller programming, sensor interfacing, and real-time signal processing techniques.",
+    "description": "An embedded systems project combining hardware integration and software programming. Developed using a microcontroller to interface with sensors, process data, and perform real-time control.",
     "technologies": [
-      "C/C++",
-      "Signal Processing"
+      "C++",
+      "Arduino"
     ],
-    "tools": "Microcontroller Development Environment, Debugging Tools",
+    "tools": "Arduino IDE, Circuit Simulator",
     "features": [
-      "Sensor data processing",
-      "Interrupt-driven programming",
-      "Event handling",
-      "Real-time embedded design"
+      "Sensor integration",
+      "Real-time data processing",
+      "Hardware testing",
+      "Embedded programming"
     ],
     "github": null,
     "demo": null
   },
 
   {
-    "id": "solar_car",
-    "name": "Solar Car Power System",
-    "subtitle": "Solar-powered electrical vehicle subsystem",
+    "id": "software_application",
+    "name": "Software Application",
+    "subtitle": "Programming and problem-solving project",
     "category": "university",
     "type": [
-      "electrical",
-      "embedded"
+      "software"
+    ],
+    "color": "#9F7AEA",
+    "year": 2025,
+    "description": "A software project developed to apply programming concepts, algorithm design, and user-focused development practices.",
+    "technologies": [
+      "Python",
+      "JavaScript"
+    ],
+    "tools": "VS Code, GitHub",
+    "features": [
+      "User interface design",
+      "Data processing",
+      "Modular programming",
+      "Testing and debugging"
+    ],
+    "github": null,
+    "demo": null
+  },
+
+  {
+    "id": "electrical_design",
+    "name": "Electrical Engineering Design",
+    "subtitle": "Circuit analysis and hardware design",
+    "category": "university",
+    "type": [
+      "electrical"
     ],
     "color": "#48BB78",
     "year": 2025,
-    "description": "Designed and tested a solar power system integrating photovoltaic analysis, DC motor control, and power electronics.",
+    "description": "An electrical engineering project involving circuit design, analysis, simulation, and practical implementation.",
     "technologies": [
-      "LTspice",
-      "KiCad",
-      "MATLAB"
+      "C++"
     ],
-    "tools": "LTspice, KiCad, Circuit Simulation",
+    "tools": "LTSpice, MATLAB, KiCad",
     "features": [
-      "Solar panel characterisation",
-      "Buck converter PCB design",
-      "Power system integration",
-      "Performance testing and optimisation"
+      "Circuit simulation",
+      "Component selection",
+      "Performance analysis",
+      "Hardware implementation"
     ],
     "github": null,
     "demo": null
@@ -115,84 +107,27 @@
   {
     "id": "tap_wrench",
     "name": "Tap Wrench Manufacturing",
-    "subtitle": "Mechanical machining and fabrication project",
+    "subtitle": "Machining and mechanical fabrication project",
     "category": "university",
     "type": [
       "mechanical"
     ],
     "color": "#F6AD55",
     "year": 2025,
-    "description": "Manufactured a functional tap wrench from raw steel stock using workshop machining processes and engineering drawings.",
+    "description": "A mechanical manufacturing project involving the production of a tap wrench from a raw iron cube. The process included precision machining operations to transform raw material into a functional hand tool.",
     "technologies": [
       "Machining",
-      "Milling",
-      "Lathe",
-      "Engineering Drawing"
+      "Manufacturing"
     ],
-    "tools": "Milling Machine, Lathe, Drill Press, Measuring Equipment",
+    "tools": "Milling Machine, Lathe, Drill Press",
     "features": [
+      "Material preparation from iron stock",
       "Milling operations",
-      "Lathe turning",
-      "Precision drilling",
-      "Tolerance measurement",
-      "Manufacturing from raw stock"
+      "Lathe machining",
+      "Drilling and finishing",
+      "Precision measurement and inspection"
     ],
     "github": null,
     "demo": null
-  },
-
-  {
-    "id": "image_processing",
-    "name": "Image Processing Project",
-    "subtitle": "Computational image analysis using Python",
-    "category": "university",
-    "type": [
-      "software"
-    ],
-    "color": "#9F7AEA",
-    "year": 2025,
-    "description": "Applied mathematical modelling and programming techniques to process and enhance digital images using matrix-based methods.",
-    "technologies": [
-      "Python",
-      "MATLAB"
-    ],
-    "tools": "Python Development Environment",
-    "features": [
-      "Matrix operations",
-      "Image transformation",
-      "Image reconstruction",
-      "Data processing algorithms"
-    ],
-    "github": null,
-    "demo": null
-  },
-
-  {
-    "id": "disrupt_challenge",
-    "name": "Disrupt Challenge Hackathon",
-    "subtitle": "Wearable safety technology prototype",
-    "category": "university",
-    "type": [
-      "software",
-      "electrical"
-    ],
-    "color": "#38B2AC",
-    "year": 2025,
-    "description": "Collaborated on the design and prototyping of a wearable safety device for remote workers, combining embedded systems, electronics, and product development.",
-    "technologies": [
-      "C/C++",
-      "Prototyping"
-    ],
-    "tools": "Rapid Prototyping Tools, Electronics Equipment",
-    "features": [
-      "Fall detection concept",
-      "Heart-rate monitoring",
-      "Emergency communication system",
-      "Hardware/software integration",
-      "Technical presentation"
-    ],
-    "github": null,
-    "demo": null
-  },
-
+  }
 ]
