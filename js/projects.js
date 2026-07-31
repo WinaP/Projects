@@ -12,7 +12,6 @@ const TYPE_LABEL = {
   'software': 'Software',
   'electrical': 'Electrical',
   'mechanical': 'Mechanical',
-  'mixture': 'Mixture',
 };
 
 const TECH_TAG = {
@@ -47,10 +46,13 @@ function buildCards(filter) {
   Object.values(ALL_PROJECTS).forEach(project => {
 
     if (filter !== 'all') {
-      const cMatch = project.category &&
-                     project.category.toLowerCase() === filter;
-
-      if (!cMatch) return;
+      const categoryMatch = project.category &&
+                            project.category.toLowerCase() === filter;
+    
+      const typeMatch = project.type &&
+                        project.type.toLowerCase() === filter;
+    
+      if (!categoryMatch && !typeMatch) return;
     }
 
     const card = document.createElement('div');
