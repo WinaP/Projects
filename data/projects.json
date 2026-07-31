@@ -40,7 +40,7 @@
     "year": 2025,
     "description": "Designed, manufactured, and tested an autonomous line following robot integrating custom PCB hardware, embedded programming, and mechanical prototyping.",
     "technologies": [
-      "C++",
+      "C",
       "Arduino",
       "KiCad",
       "3D CAD"
@@ -71,7 +71,6 @@
     "description": "Developed an embedded step counter system using microcontroller programming, sensor interfacing, and real-time signal processing techniques.",
     "technologies": [
       "C++",
-      "Embedded Systems"
     ],
     "tools": "Microcontroller Development Environment, Debugging Tools",
     "features": [
@@ -125,7 +124,8 @@
     "description": "Manufactured a functional tap wrench from raw steel stock using workshop machining processes and engineering drawings.",
     "technologies": [
       "Machining",
-      "Manufacturing",
+      "Milling",
+      "Lathe",
       "Engineering Drawing"
     ],
     "tools": "Milling Machine, Lathe, Drill Press, Measuring Equipment",
@@ -179,9 +179,8 @@
     "year": 2025,
     "description": "Collaborated on the design and prototyping of a wearable safety device for remote workers, combining embedded systems, electronics, and product development.",
     "technologies": [
-      "Embedded Systems",
       "C++",
-      "Electronics"
+      "Prototyping"
     ],
     "tools": "Rapid Prototyping Tools, Electronics Equipment",
     "features": [
