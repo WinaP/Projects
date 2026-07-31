@@ -137,6 +137,30 @@
   },
 
   {
+    "id": "elevator",
+    "name": "Elevator Project",
+    "subtitle": "PLC Logic Programming",
+    "category": "university",
+    "type": [
+      "software"
+    ],
+    "color": "#9F7AEA",
+    "year": 2025,
+    "description": "Programmed and tuned a PLC-controlled elevator prototype using PID control.",
+    "technologies": [
+      "PLC Programming"
+    ],
+    "tools": "Elevator Prototype, PLC Programmer",
+    "features": [
+      "Smooth movement using PID",
+      "Clean ladder logic",
+      "Safety features as per real elevator",
+    ],
+    "github": null,
+    "demo": null
+  },
+
+  {
     "id": "tap_wrench",
     "name": "Tap Wrench Manufacturing",
     "subtitle": "Mechanical machining and fabrication project",
