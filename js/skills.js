@@ -73,74 +73,113 @@ function buildProficiencyChart(skillGroups) {
   const allSkills = [];
 
   skillGroups.forEach(group => {
+
     group.skills.forEach(skill => {
+
       allSkills.push({
-        ...skill,
+        name: skill.name,
+        proficiency: skill.proficiency,
         color: group.color
       });
+
     });
+
   });
+
 
   const canvas = document.getElementById("proficiency-chart");
 
   if (!canvas) return;
+
 
   const ctx = canvas.getContext("2d");
 
   const W = canvas.width;
   const H = canvas.height;
 
+
+  ctx.clearRect(0, 0, W, H);
+
+
   const pad = {
-    top: 10,
-    bottom: 30,
-    left: 10,
-    right: 10
+    top: 20,
+    bottom: 60,
+    left: 20,
+    right: 20
   };
+
 
   const chartH = H - pad.top - pad.bottom;
 
-  const barW =
-    (W - pad.left - pad.right) / allSkills.length;
+  const barW =(W - pad.left - pad.right) / allSkills.length;
 
   allSkills.forEach((skill, i) => {
 
-    const barH =
-      (skill.proficiency / 100) * chartH;
+    const barH =(skill.proficiency / 100) * chartH;
+    const x =pad.left + i * barW;
+    const y =pad.top + chartH - barH;
 
-    const x = pad.left + i * barW;
-
-    const y = pad.top + chartH - barH;
-
-    ctx.fillStyle = skill.color + "44";
-
+    // bar background
+    ctx.fillStyle = skill.color + "33";
+    
     ctx.fillRect(
-      x + 2,
+      x + 4,
       y,
-      barW - 4,
+      barW - 8,
       barH
     );
 
+
+    // top highlight
     ctx.fillStyle = skill.color;
 
     ctx.fillRect(
-      x + 2,
+      x + 4,
       y,
-      barW - 4,
+      barW - 8,
       3
     );
 
-    ctx.fillStyle = "rgba(160,160,170,0.6)";
-    ctx.font = "7px DM Sans";
+
+    // percentage
+    ctx.fillStyle = "rgba(240,235,228,0.7)";
+    ctx.font = "10px DM Sans";
     ctx.textAlign = "center";
 
     ctx.fillText(
-      skill.name,
+      skill.proficiency + "%",
       x + barW / 2,
-      H - 8
+      y - 6
     );
+
+
+    // rotated skill label
+    ctx.save();
+
+    ctx.translate(
+      x + barW / 2,
+      H - 10
+    );
+
+    ctx.rotate(-Math.PI / 5);
+
+    ctx.fillStyle = "rgba(160,160,170,0.8)";
+    ctx.font = "9px DM Sans";
+    ctx.textAlign = "right";
+
+    ctx.fillText(
+      skill.name,
+      0,
+      0
+    );
+
+    ctx.restore();
 
   });
 
+
+
+  // baseline
   ctx.beginPath();
 
   ctx.moveTo(
@@ -153,7 +192,10 @@ function buildProficiencyChart(skillGroups) {
     pad.top + chartH
   );
 
-  ctx.strokeStyle = "rgba(255,255,255,0.06)";
+
+  ctx.strokeStyle =
+    "rgba(255,255,255,0.06)";
+
   ctx.stroke();
 
 }
