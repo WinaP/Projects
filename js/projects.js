@@ -15,13 +15,41 @@ const TYPE_LABEL = {
 };
 
 const TECH_TAG = {
-  'HTML':       '<span class="tag">HTML</span>',
-  'CSS':        '<span class="tag">CSS</span>',
-  'JavaScript': '<span class="tag">JavaScript</span>',
-  'Python':     '<span class="tag">Python</span>',
-  'C++':        '<span class="tag">C++</span>',
-  'Arduino':    '<span class="tag">Arduino</span>',
-  '3D CAD':     '<span class="tag">3D CAD</span>',
+  // Programming
+  'C':             '<span class="tag">C</span>',
+  'Python':        '<span class="tag">Python</span>',
+  'JavaScript':    '<span class="tag">JavaScript</span>',
+  'HTML':          '<span class="tag">HTML</span>',
+  'CSS':           '<span class="tag">CSS</span>',
+  'SQL':           '<span class="tag">SQL</span>',
+  'VHDL':          '<span class="tag">VHDL</span>',
+  'MATLAB':        '<span class="tag">MATLAB</span>',
+  'Simscape':      '<span class="tag">Simscape</span>',
+  'PLC Programming': '<span class="tag">PLC Programming</span>',
+
+  // Embedded / Electronics
+  'Arduino':       '<span class="tag">Arduino</span>',
+  'KiCad':         '<span class="tag">KiCad</span>',
+  'LTspice':       '<span class="tag">LTspice</span>',
+  'PCB Design':    '<span class="tag">PCB Design</span>',
+  'Soldering':     '<span class="tag">Soldering</span>',
+
+  // Mechanical / Manufacturing
+  '3D CAD':        '<span class="tag">3D CAD</span>',
+  'Engineering Drawing': '<span class="tag">Engineering Drawing</span>',
+  'Milling':       '<span class="tag">Milling</span>',
+  'Lathe':         '<span class="tag">Lathe</span>',
+  'CNC Machining': '<span class="tag">CNC Machining</span>',
+  'Welding':       '<span class="tag">Welding</span>',
+  'Machining':     '<span class="tag">Machining</span>',
+
+  // Other tools / methods
+  'Circuit Simulation': '<span class="tag">Circuit Simulation</span>',
+  'Matrix Operations': '<span class="tag">Matrix Operations</span>',
+  'Image Processing': '<span class="tag">Image Processing</span>',
+  'Signal Processing': '<span class="tag">Signal Processing</span>',
+  'Prototyping':   '<span class="tag">Prototyping</span>',
+  'Testing':       '<span class="tag">Testing</span>'
 };
 
 let ALL_PROJECTS = {};
