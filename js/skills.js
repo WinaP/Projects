@@ -5,36 +5,27 @@
 fetch('../data/skills.json')
   .then(r => r.json())
   .then(skills => {
-    buildSkillTimeline(skills);
+    buildSkills(skills);
     buildProficiencyChart(skills);
   });
 
 
-// ── Skill Timeline ────────────────────────────────────────────
-function buildSkillTimeline(skills) {
+// ── Skills Timeline ──────────────────────────────────────────
+function buildSkills(skills) {
+
   const container = document.getElementById('skill-timeline');
 
   container.innerHTML = skills.map(skill => {
 
-    const level = skill.level || 0;
-
-    const levelColor =
-      level >= 90 ? '#F56565' :
-      level >= 70 ? '#ED8936' :
-      level >= 45 ? '#9F7AEA' :
-      '#48BB78';
-
-
-    const tools = (skill.tools || [])
-      .map(t => `<div class="skill-tool">${t}</div>`)
+    const tags = (skill.skills || [])
+      .map(s => `<span class="tag">${s}</span>`)
       .join('');
-
 
     return `
       <div class="skill-item" style="--skill-color:${skill.color || '#A0AEC0'}">
 
         <div class="skill-category">
-          ${skill.category || ''}
+          ${skill.category}
         </div>
 
         <div class="skill-body">
@@ -43,45 +34,39 @@ function buildSkillTimeline(skills) {
             ${skill.name}
           </div>
 
-          <div class="skill-description">
-            ${skill.description || ''}
+          <div class="skill-summary">
+            ${skill.summary}
           </div>
 
-          ${tools ? `
-            <div class="skill-tools" style="margin-top:0.45rem">
-              ${tools}
-            </div>
-          ` : ''}
-
+          <div class="skill-tags">
+            ${tags}
+          </div>
 
           <div class="proficiency-bar-wrap">
-
             <div class="proficiency-row">
               <span>Proficiency</span>
-              <span>${level}%</span>
+              <span>${skill.proficiency}%</span>
             </div>
 
             <div class="proficiency-bar">
               <div 
                 class="proficiency-fill"
-                style="width:${level}%;background:${levelColor}">
+                style="width:${skill.proficiency}%;background:${skill.color}">
               </div>
             </div>
-
           </div>
 
-
         </div>
-
       </div>
     `;
 
   }).join('');
+
 }
 
 
 
-// ── Mini proficiency bar chart ────────────────────────────────
+// ── Proficiency Chart ────────────────────────────────────────
 function buildProficiencyChart(skills) {
 
   const canvas = document.getElementById('proficiency-chart');
@@ -96,89 +81,78 @@ function buildProficiencyChart(skills) {
 
 
   const pad = {
-    t: 8,
-    b: 24,
-    l: 6,
-    r: 6
+    top: 10,
+    bottom: 30,
+    left: 10,
+    right: 10
   };
 
 
-  const chartH = H - pad.t - pad.b;
+  const chartH = H - pad.top - pad.bottom;
 
-  const barW = (W - pad.l - pad.r) / skills.length;
-
+  const barW = 
+    (W - pad.left - pad.right) / skills.length;
 
 
   skills.forEach((skill, i) => {
 
-    const level = skill.level || 0;
+    const value = skill.proficiency;
 
-    const barH = (level / 100) * chartH;
+    const barH = (value / 100) * chartH;
 
-    const x = pad.l + i * barW;
+    const x = pad.left + i * barW;
 
-    const y = pad.t + chartH - barH;
-
-
-    const colour =
-      level >= 90 ? '#F56565' :
-      level >= 70 ? '#ED8936' :
-      level >= 45 ? '#9F7AEA' :
-      '#48BB78';
+    const y = pad.top + chartH - barH;
 
 
-    ctx.fillStyle = colour + '44';
+    ctx.fillStyle = skill.color + "44";
+
     ctx.fillRect(
-      x + 0.5,
+      x + 2,
       y,
-      barW - 1,
+      barW - 4,
       barH
     );
 
 
-    ctx.fillStyle = colour;
+    ctx.fillStyle = skill.color;
+
     ctx.fillRect(
-      x + 0.5,
+      x + 2,
       y,
-      barW - 1,
-      2
+      barW - 4,
+      3
     );
 
 
-    if (i % 2 === 0) {
+    ctx.fillStyle = "rgba(160,160,170,0.6)";
+    ctx.font = "7px DM Sans";
 
-      ctx.fillStyle = 'rgba(160,160,170,0.5)';
-      ctx.font = '7px DM Sans,sans-serif';
-      ctx.textAlign = 'center';
+    ctx.textAlign = "center";
 
-      ctx.fillText(
-        skill.name,
-        x + barW / 2,
-        H - 6
-      );
-
-    }
+    ctx.fillText(
+      skill.proficiency + "%",
+      x + barW / 2,
+      H - 8
+    );
 
   });
 
 
-  // axis line
   ctx.beginPath();
 
   ctx.moveTo(
-    pad.l,
-    pad.t + chartH
+    pad.left,
+    pad.top + chartH
   );
 
   ctx.lineTo(
-    W - pad.r,
-    pad.t + chartH
+    W - pad.right,
+    pad.top + chartH
   );
 
   ctx.strokeStyle =
-    'rgba(255,255,255,0.06)';
-
-  ctx.lineWidth = 1;
+    "rgba(255,255,255,0.06)";
 
   ctx.stroke();
 
