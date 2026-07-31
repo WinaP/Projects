@@ -9,6 +9,7 @@ fetch('../data/skills.json')
     buildProficiencyChart(skills);
   });
 
+
 // ── Skills Timeline ──────────────────────────────────────────
 function buildSkills(skillGroups) {
   const container = document.getElementById("skill-timeline");
@@ -20,7 +21,6 @@ function buildSkills(skillGroups) {
           <div class="skill-type">
             ${group.type}
           </div>
-
           <div class="skill-body">
             <div class="skill-name">
               ${skill.name}
@@ -28,17 +28,15 @@ function buildSkills(skillGroups) {
             <div class="skill-summary">
               ${skill.summary}
             </div>
-
             <div class="proficiency-bar-wrap">
               <div class="proficiency-row">
                 <span>Proficiency</span>
                 <span>${skill.proficiency}%</span>
               </div>
-
               <div class="proficiency-bar">
                 <div
                   class="proficiency-fill"
-                  style="width:${skill.proficiency}%;background:${group.color}">
+                  style="width:${skill.proficiency}%;background:${getProficiencyColor(skill.proficiency)}">
                 </div>
               </div>
             </div>
@@ -51,6 +49,8 @@ function buildSkills(skillGroups) {
   container.innerHTML = html;
 }
 
+
+// ── Proficiency Colours ──────────────────────────────────────
 function getProficiencyColor(value) {
   if (value >= 90) {
     return "#F56565"; // Advanced
@@ -77,7 +77,7 @@ function buildProficiencyChart(skillGroups) {
       });
     });
   });
-  
+
   const canvas = document.getElementById("proficiency-chart");
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
@@ -92,13 +92,16 @@ function buildProficiencyChart(skillGroups) {
   };
 
   const chartH = H - pad.top - pad.bottom;
-  const barW =(W - pad.left - pad.right) / allSkills.length;
-
+  const barW =
+    (W - pad.left - pad.right) / allSkills.length;
   allSkills.forEach((skill, i) => {
-    const barH =(skill.proficiency / 100) * chartH;
-    const x =pad.left + i * barW;
-    const y =pad.top + chartH - barH;
-    
+    const barH =
+      (skill.proficiency / 100) * chartH;
+    const x =
+      pad.left + i * barW;
+    const y =
+      pad.top + chartH - barH;
+
     // bar background
     ctx.fillStyle = skill.color + "33";
     ctx.fillRect(
@@ -131,18 +134,21 @@ function buildProficiencyChart(skillGroups) {
     ctx.fillStyle = "rgba(160,160,170,0.8)";
     ctx.font = "9px DM Sans";
     ctx.textAlign = "center";
-    
-    // split long labels into two lines
+    // split long names into two lines
     const words = skill.name.split(" ");
-    const line1 = words.slice(0, Math.ceil(words.length / 2)).join(" ");
-    const line2 = words.slice(Math.ceil(words.length / 2)).join(" ");
-    
+    const midpoint =
+      Math.ceil(words.length / 2);
+    const line1 =
+      words.slice(0, midpoint).join(" ");
+    const line2 =
+      words.slice(midpoint).join(" ");
+
     ctx.fillText(
       line1,
       x + barW / 2,
       H - 25
     );
-    
+
     if (line2) {
       ctx.fillText(
         line2,
@@ -150,15 +156,16 @@ function buildProficiencyChart(skillGroups) {
         H - 12
       );
     }
-  );
+  });
 
   // baseline
   ctx.beginPath();
+
   ctx.moveTo(
     pad.left,
     pad.top + chartH
   );
-  
+
   ctx.lineTo(
     W - pad.right,
     pad.top + chartH
@@ -166,5 +173,6 @@ function buildProficiencyChart(skillGroups) {
 
   ctx.strokeStyle =
     "rgba(255,255,255,0.06)";
+
   ctx.stroke();
 }
