@@ -6,7 +6,7 @@
   <title>Project Portfolio — Skills Log</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body data-page="projects">
+<body data-page="skills">
 
 <header id="site-header">
   <div class="container inner">
@@ -26,24 +26,23 @@
     <p>A breakdown of my skills!</p>
   </div>
 
-  <div class="skills-layout">
-    <div class="skill-timeline" id="skill-timeline"></div>
+  <div class="skill-chart-sticky">
 
-    <div class="chart-sidebar">
-      <div class="card">
-        <h4 style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-faint);margin-bottom:1rem">
-          Skill Proficiency
-        </h4>
-        <canvas id="proficiency-chart" width="230" height="440"></canvas>
-        <div style="margin-top:0.8rem;display:flex;flex-direction:column;gap:0.35rem;font-size:0.72rem;color:var(--text-faint)">
-          <span style="display:flex;align-items:center;gap:0.4rem"><span style="width:8px;height:8px;background:#F56565;border-radius:2px;display:inline-block"></span>≥ 90 — Advanced</span>
-          <span style="display:flex;align-items:center;gap:0.4rem"><span style="width:8px;height:8px;background:#ED8936;border-radius:2px;display:inline-block"></span>≥ 70 — Proficient</span>
-          <span style="display:flex;align-items:center;gap:0.4rem"><span style="width:8px;height:8px;background:#9F7AEA;border-radius:2px;display:inline-block"></span>≥ 45 — Intermediate</span>
-          <span style="display:flex;align-items:center;gap:0.4rem"><span style="width:8px;height:8px;background:#48BB78;border-radius:2px;display:inline-block"></span>&lt; 45 — Learning</span>
-        </div>
+    <div class="card">
+      <h4 style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-faint);margin-bottom:1rem">
+        Skill Proficiency
+      </h4>
+      <canvas id="proficiency-chart" width="900" height="400"></canvas>
+      <div style="margin-top:0.8rem;display:flex;flex-direction:column;gap:0.35rem;font-size:0.72rem;color:var(--text-faint)">
+        <span style="display:flex;align-items:center;gap:0.4rem"><span style="width:8px;height:8px;background:#F56565;border-radius:2px;display:inline-block"></span>≥ 90 — Advanced</span>
+        <span style="display:flex;align-items:center;gap:0.4rem"><span style="width:8px;height:8px;background:#ED8936;border-radius:2px;display:inline-block"></span>≥ 70 — Proficient</span>
+        <span style="display:flex;align-items:center;gap:0.4rem"><span style="width:8px;height:8px;background:#9F7AEA;border-radius:2px;display:inline-block"></span>≥ 45 — Intermediate</span>
+        <span style="display:flex;align-items:center;gap:0.4rem"><span style="width:8px;height:8px;background:#48BB78;border-radius:2px;display:inline-block"></span>&lt; 45 — Learning</span>
       </div>
     </div>
   </div>
+  
+  <div class="skill-timeline" id="skill-timeline"></div>
 </main>
 
 <footer>
