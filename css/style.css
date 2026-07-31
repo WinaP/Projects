@@ -207,10 +207,6 @@ a { color: inherit; text-decoration: none; }
 .detail-close:hover { color: var(--text); }
 .detail-section { margin-top: 1.4rem; }
 .detail-section h4 { font-size: 0.63rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-faint); margin-bottom: 0.5rem; }
-.moment-list { list-style: none; }
-.moment-list li { font-size: 0.82rem; color: var(--text-muted); padding: 0.45rem 0; border-bottom: 1px solid var(--border); display: flex; gap: 0.6rem; }
-.ch-badge { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--text-faint); white-space: nowrap; }
-
 
 /* ══════════════════════════════════════════════════════════════
    FOOTER
