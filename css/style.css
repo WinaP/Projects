@@ -158,7 +158,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.78rem; cursor: pointer; transition: var(--transition);
 }
 .filter-bar button:hover { border-color: var(--border-hover); color: var(--text); }
-.filter-bar button.active { border-color: #9F7AEA; color: #9F7AEA; background: rgba(159,122,234,0.1); }
+.filter-bar button.active { border-color: #f0ebe4; color: #f0ebe4; background: rgba(159,122,234,0.1); }
 
 .project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); gap: 1rem; }
 .project-card {
