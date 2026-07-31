@@ -127,25 +127,29 @@ function buildProficiencyChart(skillGroups) {
       y - 6
     );
 
-    // rotated skill label
-    ctx.save();
-    ctx.translate(
-      x + barW / 2,
-      H - 10
-    );
-
-    ctx.rotate(-Math.PI / 5);
-
+    // horizontal skill label
     ctx.fillStyle = "rgba(160,160,170,0.8)";
     ctx.font = "9px DM Sans";
-    ctx.textAlign = "right";
+    ctx.textAlign = "center";
+    
+    // split long labels into two lines
+    const words = skill.name.split(" ");
+    const line1 = words.slice(0, Math.ceil(words.length / 2)).join(" ");
+    const line2 = words.slice(Math.ceil(words.length / 2)).join(" ");
+    
     ctx.fillText(
-      skill.name,
-      0,
-      0
+      line1,
+      x + barW / 2,
+      H - 25
     );
-    ctx.restore();
-  });
+    
+    if (line2) {
+      ctx.fillText(
+        line2,
+        x + barW / 2,
+        H - 12
+      );
+    }
 
   // baseline
   ctx.beginPath();
