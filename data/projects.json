@@ -159,7 +159,7 @@
     "features": [
       "Game display scrolling",
       "Board synchronisation",
-      "Randomised seed for maze",
+      "Randomised seed for maze"
     ],
     "github": null,
     "demo": null
@@ -183,7 +183,7 @@
     "features": [
       "Smooth movement using PID",
       "Clean ladder logic",
-      "Safety features as per real elevator",
+      "Safety features as per real elevator"
     ],
     "github": null,
     "demo": null
