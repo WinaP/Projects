@@ -4,68 +4,113 @@
     "category": "Web Development",
     "name": "Frontend Development",
     "summary": "Building responsive and interactive websites using modern frontend technologies.",
-    "proficiency": 85,
+    "color": "#4299E1",
     "skills": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Responsive Design",
-      "UI Development"
-    ],
-    "color": "#4299E1"
+      {
+        "id": "html",
+        "name": "HTML",
+        "proficiency": 90
+      },
+      {
+        "id": "css",
+        "name": "CSS",
+        "proficiency": 85
+      },
+      {
+        "id": "javascript",
+        "name": "JavaScript",
+        "proficiency": 80
+      },
+      {
+        "id": "responsive_design",
+        "name": "Responsive Design",
+        "proficiency": 85
+      }
+    ]
   },
+
   {
     "id": "software",
-    "category": "Software",
-    "name": "Software Development",
-    "summary": "Creating software solutions with structured programming and problem solving.",
-    "proficiency": 80,
+    "category": "Software Development",
+    "name": "Programming & Software",
+    "summary": "Developing software solutions using programming concepts and problem solving.",
+    "color": "#9F7AEA",
     "skills": [
-      "Python",
-      "C++",
-      "Data Structures",
-      "Algorithms"
-    ],
-    "color": "#9F7AEA"
+      {
+        "id": "python",
+        "name": "Python",
+        "proficiency": 85
+      },
+      {
+        "id": "cpp",
+        "name": "C++",
+        "proficiency": 75
+      },
+      {
+        "id": "algorithms",
+        "name": "Algorithms",
+        "proficiency": 70
+      },
+      {
+        "id": "data_structures",
+        "name": "Data Structures",
+        "proficiency": 65
+      }
+    ]
   },
-  {
-    "id": "hardware",
-    "category": "Hardware",
-    "name": "Hardware Design",
-    "summary": "Working with electronics, components, and hardware integration.",
-    "proficiency": 75,
-    "skills": [
-      "Circuit Design",
-      "Microcontrollers",
-      "PCB Basics",
-      "Sensors"
-    ],
-    "color": "#48BB78"
-  },
+
   {
     "id": "electrical",
-    "category": "Electrical",
-    "name": "Electrical Engineering",
-    "summary": "Understanding electrical systems, wiring, and embedded applications.",
-    "proficiency": 70,
+    "category": "Electrical Engineering",
+    "name": "Electrical & Embedded Systems",
+    "summary": "Working with electronics, microcontrollers, and embedded applications.",
+    "color": "#48BB78",
     "skills": [
-      "Arduino",
-      "Embedded Systems",
-      "Electrical Testing"
-    ],
-    "color": "#F6AD55"
+      {
+        "id": "arduino",
+        "name": "Arduino",
+        "proficiency": 85
+      },
+      {
+        "id": "embedded_systems",
+        "name": "Embedded Systems",
+        "proficiency": 80
+      },
+      {
+        "id": "circuit_design",
+        "name": "Circuit Design",
+        "proficiency": 75
+      },
+      {
+        "id": "sensors",
+        "name": "Sensors",
+        "proficiency": 70
+      }
+    ]
   },
+
   {
-    "id": "cad",
-    "category": "Mechanical",
-    "name": "3D CAD Design",
+    "id": "mechanical",
+    "category": "Mechanical Design",
+    "name": "CAD & Mechanical Engineering",
     "summary": "Designing mechanical parts and assemblies using CAD tools.",
-    "proficiency": 65,
+    "color": "#F6AD55",
     "skills": [
-      "3D Modelling",
-      "CAD Assemblies",
-      "Mechanical Design"
-    ],
-    "color": "#F56565"
+      {
+        "id": "solidworks",
+        "name": "3D CAD Modelling",
+        "proficiency": 80
+      },
+      {
+        "id": "assemblies",
+        "name": "CAD Assemblies",
+        "proficiency": 75
+      },
+      {
+        "id": "mechanical_design",
+        "name": "Mechanical Design",
+        "proficiency": 70
+      }
+    ]
   }
 ]
