@@ -9,7 +9,7 @@
       "software"
     ],
     "color": "#4299E1",
-    "year": 2022,
+    "year": 2023,
     "description": "Developed a browser-based game website featuring user authentication and cloud data storage using Google Firebase. Implemented account management, persistent game progress, and responsive web design.",
     "technologies": [
       "HTML",
