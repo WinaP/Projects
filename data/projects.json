@@ -1,31 +1,58 @@
 [
   {
-    "id": "portfolio_website",
-    "name": "Personal Portfolio Website",
-    "subtitle": "Interactive project showcase website",
+    "id": "high_school_game",
+    "name": "Online Game Website",
+    "subtitle": "Full-stack web application with cloud backend",
     "category": "personal",
     "type": [
-      "web"
+      "web",
+      "software"
     ],
     "color": "#4299E1",
-    "year": 2026,
-    "description": "A responsive portfolio website designed to showcase my technical projects, programming experience, and engineering work. Built with a focus on clean design, organisation, and accessibility.",
+    "year": 2022,
+    "description": "Developed a browser-based game website featuring user authentication and cloud data storage using Google Firebase. Implemented account management, persistent game progress, and responsive web design.",
     "technologies": [
       "HTML",
       "CSS",
       "JavaScript"
     ],
-    "tools": "VS Code, GitHub Pages, Git",
+    "tools": "Google Firebase, VS Code",
     "features": [
-      "Interactive project cards",
-      "Filtering system by project category",
-      "Responsive design",
-      "Expandable project details"
+      "Firebase user authentication",
+      "Cloud data storage",
+      "Persistent game progress",
+      "Responsive web interface"
     ],
     "github": null,
     "demo": null
   },
-
+  
+  {
+    "id": "image_processing",
+    "name": "Image Processing Project",
+    "subtitle": "Computational image analysis using Python",
+    "category": "university",
+    "type": [
+      "software"
+    ],
+    "color": "#9F7AEA",
+    "year": 2024,
+    "description": "Applied mathematical modelling and programming techniques to process and enhance digital images using matrix-based methods.",
+    "technologies": [
+      "Python",
+      "MATLAB"
+    ],
+    "tools": "Python Development Environment",
+    "features": [
+      "Matrix operations",
+      "Image transformation",
+      "Image reconstruction",
+      "Data processing algorithms"
+    ],
+    "github": null,
+    "demo": null
+  },
+  
   {
     "id": "line_following_robot",
     "name": "Line Following Robot",
@@ -52,90 +79,6 @@
       "Embedded C/C++ programming",
       "Control algorithm development",
       "Mechanical prototyping and optimisation"
-    ],
-    "github": null,
-    "demo": null
-  },
-
-  {
-    "id": "robocup_competition",
-    "name": "RoboCup",
-    "subtitle": "Embedded project for autonomous robotics competition",
-    "category": "university",
-    "type": [
-      "software",
-      "electrical",
-      "mechanical"
-    ],
-    "color": "#38B2AC",
-    "year": 2025,
-    "description": "Collaborated in the design and development of an autonomous robot for the University of Canterbury RoboCup competition. Integrating embedded software, electronics, and mechanical design to identify, collect, and distinguish between real and fake weights.",
-    "technologies": [
-      "C/C++",
-      "Arduino",
-      "3D CAD"
-    ],
-    "tools": "Arduino IDE, Circuit Simulation, CAD Software",
-    "features": [
-      "Sensor integration and motor control",
-      "Embedded C/C++ programming",
-      "Autonomous object detection",
-      "Mechanical prototyping and optimisation"
-    ],
-    "github": null,
-    "demo": null
-  },
-
-  {
-    "id": "step_counter",
-    "name": "Embedded Step Counter",
-    "subtitle": "Microcontroller-based signal processing system",
-    "category": "university",
-    "type": [
-      "software",
-      "electrical"
-    ],
-    "color": "#38B2AC",
-    "year": 2026,
-    "description": "Developed an embedded step-counting system using microcontroller programming and real-time signal processing to detect and count user steps from sensor data.",
-    "technologies": [
-      "C/C++",
-      "Signal Processing"
-    ],
-    "tools": "Microcontroller Development Environment, Debugging Tools",
-    "features": [
-      "Sensor data processing",
-      "Interrupt-driven programming",
-      "Event handling",
-      "Real-time embedded design"
-    ],
-    "github": null,
-    "demo": null
-  },
-
-  {
-    "id": "solar_car",
-    "name": "Solar Car Power System",
-    "subtitle": "Solar-powered electrical vehicle subsystem",
-    "category": "university",
-    "type": [
-      "electrical",
-      "software"
-    ],
-    "color": "#38B2AC",
-    "year": 2026,
-    "description": "Designed and tested a solar power system integrating photovoltaic analysis, DC motor control, and power electronics.",
-    "technologies": [
-      "LTspice",
-      "KiCad",
-      "MATLAB"
-    ],
-    "tools": "LTspice, KiCad, Circuit Simulation",
-    "features": [
-      "Solar panel characterisation",
-      "Buck converter PCB design",
-      "Power system integration",
-      "Performance testing and optimisation"
     ],
     "github": null,
     "demo": null
@@ -220,26 +163,161 @@
   },
 
   {
-    "id": "image_processing",
-    "name": "Image Processing Project",
-    "subtitle": "Computational image analysis using Python",
+    "id": "microcontroller_board",
+    "name": "Microcontroller Board Assembly",
+    "subtitle": "PCB assembly and soldering",
+    "category": "university",
+    "type": [
+      "electrical"
+    ],
+    "color": "#38B2AC",
+    "year": 2024,
+    "description": "Assembled and soldered a microcontroller development board comparable to an Arduino, gaining practical experience in PCB assembly, electronic components, and hardware verification.",
+    "technologies": [
+      "Soldering"
+    ],
+    "tools": "Soldering Station, Electronic Test Equipment",
+    "features": [
+      "Through-hole soldering",
+      "Electronic component assembly",
+      "PCB inspection",
+      "Hardware testing"
+    ],
+    "github": null,
+    "demo": null
+  },
+
+  {
+    "id": "deloitte_hackathon",
+    "name": "Deloitte Hackathon",
+    "subtitle": "Machine learning concept for energy optimisation",
     "category": "university",
     "type": [
       "software"
     ],
     "color": "#9F7AEA",
-    "year": 2024,
-    "description": "Applied mathematical modelling and programming techniques to process and enhance digital images using matrix-based methods.",
+    "year": 2025,
+    "description": "Collaborated in a hackathon team to develop a machine learning concept for optimising recreation centre energy usage. Proposed an application that predicts facility occupancy, automatically manages energy consumption during low usage, and provides real-time occupancy updates to users.",
     "technologies": [
-      "Python",
+      "Prototyping"
+    ],
+    "tools": "Presentation Software, Collaborative Design Tools",
+    "features": [
+      "Machine learning solution concept",
+      "Energy efficiency strategy",
+      "User-centred application design",
+      "Technical presentation"
+    ],
+    "github": null,
+    "demo": null
+  },
+
+  {
+    "id": "aluminium_structure",
+    "name": "Aluminium Structural Design",
+    "subtitle": "Mechanical design and structural analysis",
+    "category": "university",
+    "type": [
+      "mechanical"
+    ],
+    "color": "#F6AD55",
+    "year": 2026,
+    "description": "Designed, analysed, and manufactured an aluminium structure engineered to fail within a specified load range by introducing a controlled stress concentration. Applied engineering calculations, material analysis, and iterative design to meet performance requirements.",
+    "technologies": [
+      "Engineering Drawing",
+      "Machining"
+    ],
+    "tools": "CAD Software, Workshop Equipment",
+    "features": [
+      "Stress concentration design",
+      "Mechanical calculations",
+      "Structural analysis",
+      "Load testing",
+      "Design optimisation"
+    ],
+    "github": null,
+    "demo": null
+  },
+
+  {
+    "id": "robocup_competition",
+    "name": "RoboCup",
+    "subtitle": "Embedded project for autonomous robotics competition",
+    "category": "university",
+    "type": [
+      "software",
+      "electrical",
+      "mechanical"
+    ],
+    "color": "#38B2AC",
+    "year": 2026,
+    "description": "Collaborated in the design and development of an autonomous robot for the University of Canterbury RoboCup competition. Integrating embedded software, electronics, and mechanical design to identify, collect, and distinguish between real and fake weights.",
+    "technologies": [
+      "C/C++",
+      "Arduino",
+      "3D CAD"
+    ],
+    "tools": "Arduino IDE, Circuit Simulation, CAD Software",
+    "features": [
+      "Sensor integration and motor control",
+      "Embedded C/C++ programming",
+      "Autonomous object detection",
+      "Mechanical prototyping and optimisation"
+    ],
+    "github": null,
+    "demo": null
+  },
+
+  {
+    "id": "step_counter",
+    "name": "Embedded Step Counter",
+    "subtitle": "Microcontroller-based signal processing system",
+    "category": "university",
+    "type": [
+      "software",
+      "electrical"
+    ],
+    "color": "#38B2AC",
+    "year": 2026,
+    "description": "Developed an embedded step-counting system using microcontroller programming and real-time signal processing to detect and count user steps from sensor data.",
+    "technologies": [
+      "C/C++",
+      "Signal Processing"
+    ],
+    "tools": "Microcontroller Development Environment, Debugging Tools",
+    "features": [
+      "Sensor data processing",
+      "Interrupt-driven programming",
+      "Event handling",
+      "Real-time embedded design"
+    ],
+    "github": null,
+    "demo": null
+  },
+
+  {
+    "id": "solar_car",
+    "name": "Solar Car Power System",
+    "subtitle": "Solar-powered electrical vehicle subsystem",
+    "category": "university",
+    "type": [
+      "electrical",
+      "software"
+    ],
+    "color": "#38B2AC",
+    "year": 2026,
+    "description": "Designed and tested a solar power system integrating photovoltaic analysis, DC motor control, and power electronics.",
+    "technologies": [
+      "LTspice",
+      "KiCad",
       "MATLAB"
     ],
-    "tools": "Python Development Environment",
+    "tools": "LTspice, KiCad, Circuit Simulation",
     "features": [
-      "Matrix operations",
-      "Image transformation",
-      "Image reconstruction",
-      "Data processing algorithms"
+      "Solar panel characterisation",
+      "Buck converter PCB design",
+      "Power system integration",
+      "Performance testing and optimisation"
     ],
     "github": null,
     "demo": null
@@ -268,6 +346,33 @@
       "Emergency communication system",
       "Hardware/software integration",
       "Technical presentation"
+    ],
+    "github": null,
+    "demo": null
+  },
+
+  {
+    "id": "portfolio_website",
+    "name": "Personal Portfolio Website",
+    "subtitle": "Interactive project showcase website",
+    "category": "personal",
+    "type": [
+      "web"
+    ],
+    "color": "#4299E1",
+    "year": 2026,
+    "description": "A responsive portfolio website designed to showcase my technical projects, programming experience, and engineering work. Built with a focus on clean design, organisation, and accessibility.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "tools": "VS Code, GitHub Pages, Git",
+    "features": [
+      "Interactive project cards",
+      "Filtering system by project category",
+      "Responsive design",
+      "Expandable project details"
     ],
     "github": null,
     "demo": null
