@@ -1,7 +1,7 @@
 [
   {
     "id": "web",
-    "category": "Web Development",
+    "type": "Web",
     "name": "Frontend Development",
     "summary": "Building responsive and interactive websites using modern frontend technologies.",
     "color": "#4299E1",
@@ -31,7 +31,7 @@
 
   {
     "id": "software",
-    "category": "Software Development",
+    "type": "Software",
     "name": "Programming & Software",
     "summary": "Developing software solutions using programming concepts and problem solving.",
     "color": "#9F7AEA",
@@ -61,7 +61,7 @@
 
   {
     "id": "electrical",
-    "category": "Electrical Engineering",
+    "type": "Electrical",
     "name": "Electrical & Embedded Systems",
     "summary": "Working with electronics, microcontrollers, and embedded applications.",
     "color": "#48BB78",
@@ -91,7 +91,7 @@
 
   {
     "id": "mechanical",
-    "category": "Mechanical Design",
+    "type": "Mechanical",
     "name": "CAD & Mechanical Engineering",
     "summary": "Designing mechanical parts and assemblies using CAD tools.",
     "color": "#F6AD55",
