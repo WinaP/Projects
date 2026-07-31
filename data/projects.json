@@ -3,8 +3,8 @@
     "id": "portfolio_website",
     "name": "Personal Portfolio Website",
     "subtitle": "Interactive project showcase website",
-    "category": "personal",
-    "color": "#805AD5",
+    "category": "web",
+    "color": "#4299E1",
     "year": 2026,
     "description": "A responsive portfolio website designed to showcase my technical projects, programming experience, and engineering work. Built with a focus on clean design, organisation, and accessibility.",
     "technologies": [
@@ -23,15 +23,15 @@
     "demo": null
   },
 
-  
+
   {
     "id": "arduino_project",
     "name": "Arduino Embedded System",
     "subtitle": "Microcontroller-based engineering project",
-    "category": "university",
-    "color": "#48BB78",
+    "category": "embedded",
+    "color": "#38B2AC",
     "year": 2025,
-    "description": "An embedded systems project involving hardware integration, programming, and testing. Developed to solve a practical engineering problem using a microcontroller.",
+    "description": "An embedded systems project combining hardware integration and software programming. Developed using a microcontroller to interface with sensors, process data, and perform real-time control.",
     "technologies": [
       "C++",
       "Arduino"
@@ -47,13 +47,13 @@
     "demo": null
   },
 
-  
+
   {
     "id": "software_application",
     "name": "Software Application",
     "subtitle": "Programming and problem-solving project",
-    "category": "university",
-    "color": "#4299E1",
+    "category": "software",
+    "color": "#9F7AEA",
     "year": 2025,
     "description": "A software project developed to apply programming concepts, algorithm design, and user-focused development practices.",
     "technologies": [
@@ -71,13 +71,13 @@
     "demo": null
   },
 
-  
+
   {
     "id": "electrical_design",
     "name": "Electrical Engineering Design",
     "subtitle": "Circuit analysis and hardware design",
-    "category": "university",
-    "color": "#F6AD55",
+    "category": "electrical",
+    "color": "#48BB78",
     "year": 2025,
     "description": "An electrical engineering project involving circuit design, analysis, simulation, and practical implementation.",
     "technologies": [
@@ -89,6 +89,31 @@
       "Component selection",
       "Performance analysis",
       "Hardware implementation"
+    ],
+    "github": null,
+    "demo": null
+  },
+
+
+  {
+    "id": "tap_wrench",
+    "name": "Tap Wrench Manufacturing",
+    "subtitle": "Machining and mechanical fabrication project",
+    "category": "mechanical",
+    "color": "#F6AD55",
+    "year": 2025,
+    "description": "A mechanical manufacturing project involving the production of a tap wrench from a raw iron cube. The process included precision machining operations to transform raw material into a functional hand tool.",
+    "technologies": [
+      "Machining",
+      "Manufacturing"
+    ],
+    "tools": "Milling Machine, Lathe, Drill Press",
+    "features": [
+      "Material preparation from iron stock",
+      "Milling operations",
+      "Lathe machining",
+      "Drilling and finishing",
+      "Precision measurement and inspection"
     ],
     "github": null,
     "demo": null
