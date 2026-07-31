@@ -46,11 +46,15 @@ function buildCards(filter) {
   Object.values(ALL_PROJECTS).forEach(project => {
 
     if (filter !== 'all') {
-      const categoryMatch = project.category &&
-                            project.category.toLowerCase() === filter;
-    
-      const typeMatch = project.type &&
-                        project.type.toLowerCase() === filter;
+      const categoryMatch =
+        project.category &&
+        project.category.toLowerCase() === filter;
+      
+      const typeMatch =
+        project.type &&
+        project.type.some(type => 
+          type.toLowerCase() === filter
+        );
     
       if (!categoryMatch && !typeMatch) return;
     }
@@ -70,11 +74,13 @@ function buildCards(filter) {
         ${CATEGORY_LABEL[project.category?.toLowerCase()] || project.category || ''}
       </div>
       
-      ${project.type ? 
-        `<div class="project-type">
-          ${TYPE_LABEL[project.type.toLowerCase()] || project.type}
-        </div>` 
-        : ''}
+      <div class="project-types">
+        ${(project.type || []).map(type =>
+          `<span class="tag" style="background:${project.color}22;color:${project.color}">
+            ${TYPE_LABEL[type.toLowerCase()] || type}
+          </span>`
+        ).join('')}
+      </div>
 
       <div class="project-desc">
         ${project.description || ''}
