@@ -34,7 +34,7 @@ function buildSkills(skillGroups) {
             </div>
 
             <div class="skill-summary">
-              ${group.summary}
+              ${skill.summary}
             </div>
 
             <div class="proficiency-bar-wrap">
