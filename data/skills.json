@@ -44,7 +44,7 @@
       },
       {
         "id": "cpp",
-        "name": "C++",
+        "name": "C/C++",
         "summary": "Object-oriented programming for engineering and embedded applications.",
         "proficiency": 75
       },
