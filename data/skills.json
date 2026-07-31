@@ -1,0 +1,71 @@
+[
+  {
+    "id": "web",
+    "category": "Web Development",
+    "name": "Frontend Development",
+    "summary": "Building responsive and interactive websites using modern frontend technologies.",
+    "proficiency": 85,
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive Design",
+      "UI Development"
+    ],
+    "color": "#4299E1"
+  },
+  {
+    "id": "software",
+    "category": "Software",
+    "name": "Software Development",
+    "summary": "Creating software solutions with structured programming and problem solving.",
+    "proficiency": 80,
+    "skills": [
+      "Python",
+      "C++",
+      "Data Structures",
+      "Algorithms"
+    ],
+    "color": "#9F7AEA"
+  },
+  {
+    "id": "hardware",
+    "category": "Hardware",
+    "name": "Hardware Design",
+    "summary": "Working with electronics, components, and hardware integration.",
+    "proficiency": 75,
+    "skills": [
+      "Circuit Design",
+      "Microcontrollers",
+      "PCB Basics",
+      "Sensors"
+    ],
+    "color": "#48BB78"
+  },
+  {
+    "id": "electrical",
+    "category": "Electrical",
+    "name": "Electrical Engineering",
+    "summary": "Understanding electrical systems, wiring, and embedded applications.",
+    "proficiency": 70,
+    "skills": [
+      "Arduino",
+      "Embedded Systems",
+      "Electrical Testing"
+    ],
+    "color": "#F6AD55"
+  },
+  {
+    "id": "cad",
+    "category": "Mechanical",
+    "name": "3D CAD Design",
+    "summary": "Designing mechanical parts and assemblies using CAD tools.",
+    "proficiency": 65,
+    "skills": [
+      "3D Modelling",
+      "CAD Assemblies",
+      "Mechanical Design"
+    ],
+    "color": "#F56565"
+  }
+]
