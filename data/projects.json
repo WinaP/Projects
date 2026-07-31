@@ -69,7 +69,7 @@
     ],
     "color": "#38B2AC",
     "year": 2025,
-    "description": "Collaborated in the development of autonomous robots for UC's annual 3rd year RoboCup competition where robots pick up and distinguish between real and fake weights.",
+    "description": "Collaborated in the design and development of an autonomous robot for the University of Canterbury RoboCup competition. Integrating embedded software, electronics, and mechanical design to identify, collect, and distinguish between real and fake weights.",
     "technologies": [
       "C/C++",
       "Arduino",
@@ -79,7 +79,7 @@
     "features": [
       "Sensor integration and motor control",
       "Embedded C/C++ programming",
-      "Control algorithm development",
+      "Autonomous object detection",
       "Mechanical prototyping and optimisation"
     ],
     "github": null,
@@ -97,7 +97,7 @@
     ],
     "color": "#38B2AC",
     "year": 2026,
-    "description": "Developed an embedded step counter system using microcontroller programming, sensor interfacing, and real-time signal processing techniques.",
+    "description": "Developed an embedded step-counting system using microcontroller programming and real-time signal processing to detect and count user steps from sensor data.",
     "technologies": [
       "C/C++",
       "Signal Processing"
@@ -144,21 +144,22 @@
   {
     "id": "ir_board",
     "name": "IR Board Game",
-    "subtitle": "Wireless IR communications",
+    "subtitle": "Wireless embedded game system",
     "category": "university",
     "type": [
       "software"
     ],
     "color": "#9F7AEA",
     "year": 2025,
-    "description": "Developed a two-way electronic maze game using IR communications between two custom boards.",
+    "description": "Developed a two-player electronic maze game using infrared(IR) communication between custom hardware boards, implementing reliable wireless communication and synchronised gameplay.",
     "technologies": [
       "C/C++"
     ],
     "tools": "GitLab, VS Code",
     "features": [
-      "Game display scrolling",
+      "Two-way IR communication",
       "Board synchronisation",
+      "Scrolling game display",
       "Randomised seed for maze"
     ],
     "github": null,
@@ -168,7 +169,7 @@
   {
     "id": "elevator",
     "name": "Elevator Project",
-    "subtitle": "PLC Logic Programming",
+    "subtitle": "Industrial automation and control systems",
     "category": "university",
     "type": [
       "software"
