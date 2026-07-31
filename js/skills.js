@@ -81,9 +81,17 @@ function buildProficiencyChart(skillGroups) {
   const canvas = document.getElementById("proficiency-chart");
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
-  const W = canvas.width;
-  const H = canvas.height;
+  
+  const cssWidth = canvas.clientWidth;
+  const cssHeight = canvas.clientHeight;
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = cssWidth * dpr;
+  canvas.height = cssHeight * dpr;
+  ctx.scale(dpr, dpr);
+  const W = cssWidth;
+  const H = cssHeight;
   ctx.clearRect(0, 0, W, H);
+    
   const pad = {
     top: 20,
     bottom: 60,
