@@ -3,12 +3,15 @@
 // ============================================================
 
 const CATEGORY_LABEL = {
-  'university': 'University',
-  'personal': 'Personal',
-  'software': 'Software',
-  'web development': 'Web Development',
-  'electrical': 'Electrical',
-  'embedded systems': 'Embedded Systems',
+  'university':        'University',
+  'personal':          'Personal',
+  'software':          'Software',
+  'web development':   'Web Development',
+  'electrical':        'Electrical',
+  'embedded systems':  'Embedded Systems',
+  'robotics':          'Robotics',
+  'automation':        'Automation',
+  'mechanical':        'Mechanical',
 };
 
 const TECH_TAG = {
@@ -18,6 +21,7 @@ const TECH_TAG = {
   'Python':     '<span class="tag tag-python">Python</span>',
   'C++':        '<span class="tag tag-cpp">C++</span>',
   'Arduino':    '<span class="tag tag-arduino">Arduino</span>',
+  '3D CAD':        '<span class="tag">3D CAD</span>',
 };
 
 let ALL_PROJECTS = {};   // keyed by id after fetch
