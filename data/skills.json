@@ -2,28 +2,30 @@
   {
     "id": "web",
     "type": "Web",
-    "name": "Frontend Development",
-    "summary": "Building responsive and interactive websites using modern frontend technologies.",
     "color": "#4299E1",
     "skills": [
       {
         "id": "html",
         "name": "HTML",
+        "summary": "Writing semantic and accessible webpage structures.",
         "proficiency": 90
       },
       {
         "id": "css",
         "name": "CSS",
+        "summary": "Creating responsive layouts, animations, and modern user interfaces.",
         "proficiency": 85
       },
       {
         "id": "javascript",
         "name": "JavaScript",
+        "summary": "Developing interactive web applications and dynamic user experiences.",
         "proficiency": 80
       },
       {
         "id": "responsive_design",
         "name": "Responsive Design",
+        "summary": "Designing websites that adapt across desktop, tablet, and mobile devices.",
         "proficiency": 85
       }
     ]
@@ -32,28 +34,30 @@
   {
     "id": "software",
     "type": "Software",
-    "name": "Programming & Software",
-    "summary": "Developing software solutions using programming concepts and problem solving.",
     "color": "#9F7AEA",
     "skills": [
       {
         "id": "python",
         "name": "Python",
+        "summary": "Developing scripts, automation tools, and general-purpose applications.",
         "proficiency": 85
       },
       {
         "id": "cpp",
         "name": "C++",
+        "summary": "Object-oriented programming for engineering and embedded applications.",
         "proficiency": 75
       },
       {
         "id": "algorithms",
         "name": "Algorithms",
+        "summary": "Applying efficient problem-solving techniques and algorithm design.",
         "proficiency": 70
       },
       {
         "id": "data_structures",
         "name": "Data Structures",
+        "summary": "Using arrays, linked lists, trees, and other fundamental data structures.",
         "proficiency": 65
       }
     ]
@@ -62,28 +66,30 @@
   {
     "id": "electrical",
     "type": "Electrical",
-    "name": "Electrical & Embedded Systems",
-    "summary": "Working with electronics, microcontrollers, and embedded applications.",
     "color": "#48BB78",
     "skills": [
       {
         "id": "arduino",
         "name": "Arduino",
+        "summary": "Programming and interfacing Arduino microcontrollers with hardware.",
         "proficiency": 85
       },
       {
         "id": "embedded_systems",
         "name": "Embedded Systems",
+        "summary": "Developing embedded solutions combining hardware and software.",
         "proficiency": 80
       },
       {
         "id": "circuit_design",
         "name": "Circuit Design",
+        "summary": "Designing, analysing, and testing electronic circuits.",
         "proficiency": 75
       },
       {
         "id": "sensors",
         "name": "Sensors",
+        "summary": "Integrating and calibrating sensors for embedded projects.",
         "proficiency": 70
       }
     ]
@@ -92,23 +98,24 @@
   {
     "id": "mechanical",
     "type": "Mechanical",
-    "name": "CAD & Mechanical Engineering",
-    "summary": "Designing mechanical parts and assemblies using CAD tools.",
     "color": "#F6AD55",
     "skills": [
       {
         "id": "solidworks",
         "name": "3D CAD Modelling",
+        "summary": "Creating detailed 3D models and engineering drawings.",
         "proficiency": 80
       },
       {
         "id": "assemblies",
         "name": "CAD Assemblies",
+        "summary": "Building and constraining multi-part mechanical assemblies.",
         "proficiency": 75
       },
       {
         "id": "mechanical_design",
         "name": "Mechanical Design",
+        "summary": "Applying engineering principles to mechanical component design.",
         "proficiency": 70
       }
     ]
