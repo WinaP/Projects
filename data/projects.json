@@ -113,6 +113,30 @@
   },
 
   {
+    "id": "ir_board",
+    "name": "IR Board Game",
+    "subtitle": "Wireless IR communications",
+    "category": "university",
+    "type": [
+      "software"
+    ],
+    "color": "#9F7AEA",
+    "year": 2025,
+    "description": "Developed a two-way electronic maze game using IR communications between two custom boards.",
+    "technologies": [
+      "C/C++"
+    ],
+    "tools": "GitLab, VS Code",
+    "features": [
+      "Game display scrolling",
+      "Board synchronisation",
+      "Randomised seed for maze",
+    ],
+    "github": null,
+    "demo": null
+  },
+
+  {
     "id": "tap_wrench",
     "name": "Tap Wrench Manufacturing",
     "subtitle": "Mechanical machining and fabrication project",
