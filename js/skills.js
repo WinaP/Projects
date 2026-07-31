@@ -34,7 +34,6 @@ function getSortedSkills(skillGroups) {
   return allSkills;
 }
 
-
 // ── Skills Timeline ──────────────────────────────────────────
 function buildSkills(skillGroups) {
   const container = document.getElementById("skill-timeline");
@@ -44,9 +43,9 @@ function buildSkills(skillGroups) {
 
   allSkills.forEach(skill => {
     html += `
-      <div class="skill-item" style="--skill-color:${group.color}">
+      <div class="skill-item" style="--skill-color:${skill.color}">
         <div class="skill-type">
-          ${group.type}
+          ${skill.type}
         </div>
         <div class="skill-body">
           <div class="skill-name">
