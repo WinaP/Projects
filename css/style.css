@@ -1,0 +1,172 @@
+/* ============================================================
+   SHARED SOULS — Main Stylesheet
+   Aesthetic: Dark editorial / manga panel energy
+   Fonts: Cormorant Garamond (display) + DM Sans (body) + DM Mono
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+/* ── Design tokens ─────────────────────────────────────────── */
+:root {
+  --bg:           #0e0d0f;
+  --bg-card:      #141217;
+  --bg-hover:     #1c1a21;
+  --border:       rgba(255,255,255,0.06);
+  --border-hover: rgba(255,255,255,0.14);
+
+  --text:         #f0ebe4;
+  --text-muted:   #887e90;
+  --text-faint:   #4a4352;
+
+  --shinobu:  #9F7AEA;
+  --natasha:  #F56565;
+  --mha:      #48BB78;
+  --mcu:      #E53E3E;
+  --ds:       #9F7AEA;
+
+  --radius: 10px;
+  --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── Reset ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Typography ─────────────────────────────────────────────── */
+h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 600; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.05; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; }
+h3 { font-size: clamp(1.1rem, 2vw, 1.5rem); }
+h4 { font-size: 1rem; }
+p  { line-height: 1.65; font-size: 0.93rem; color: var(--text-muted); }
+code { font-family: 'DM Mono', monospace; font-size: 0.82rem; }
+a { color: inherit; text-decoration: none; }
+
+/* ── Layout ──────────────────────────────────────────────────── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ── Card ───────────────────────────────────────────────────── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+.card:hover { border-color: var(--border-hover); background: var(--bg-hover); }
+
+/* ── Tags ───────────────────────────────────────────────────── */
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.tag-1  { background: rgba(72,187,120,0.15);  color: #48BB78; }
+.tag-2   { background: rgba(159,122,234,0.15); color: #9F7AEA; }
+.tag-3  { background: rgba(245,101,101,0.15); color: #F56565; }
+.tag-4   { background: rgba(45,55,72,0.4);     color: #A0AEC0; }
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--text-faint); border-radius: 3px; }
+
+/* ══════════════════════════════════════════════════════════════
+   HEADER / NAV
+   ══════════════════════════════════════════════════════════════ */
+#site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(14,13,15,0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  height: 60px;
+  display: flex; align-items: center;
+}
+#site-header .inner {
+  display: flex; align-items: center; justify-content: space-between; width: 100%;
+}
+.brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 700; letter-spacing: 0.03em;
+  color: var(--text); white-space: nowrap;
+}
+#site-header nav { display: flex; gap: 0.2rem; }
+#site-header nav a {
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 0.83rem;
+  transition: var(--transition);
+}
+#site-header nav a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+#site-header nav a.active { color: var(--text); background: rgba(255,255,255,0.08); }
+
+/* ══════════════════════════════════════════════════════════════
+   PAGE WRAPPER
+   ══════════════════════════════════════════════════════════════ */
+.page-wrap { padding: 2.5rem 0 5rem; }
+
+/* ── Page header ────────────────────────────────────────────── */
+.page-header { margin-bottom: 2rem; }
+.page-header .eyebrow {
+  font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-faint); margin-bottom: 0.5rem;
+}
+.page-header h1 { line-height: 1.05; }
+.page-header p  { margin-top: 0.6rem; max-width: 60ch; }
+
+/* ══════════════════════════════════════════════════════════════
+   OVERVIEW (index.html)
+   ══════════════════════════════════════════════════════════════ */
+.my-title {
+  background: linear-gradient(135deg, #f0ebe4 30%, #9F7AEA 80%, #F56565 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.my-glow {
+  position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 350px;
+  background: radial-gradient(ellipse, rgba(159,122,234,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.my-meta { display: flex; gap: 2rem; flex-wrap: wrap; font-size: 0.8rem; color: var(--text-faint); margin-top: 1.5rem; }
+.hero-meta strong { color: var(--text-muted); }
+
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 1rem; margin: 2rem 0; }
+.stat-pill {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1.2rem 1.4rem; border-left: 3px solid transparent;
+}
+.stat-pill .label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-faint); margin-bottom: 0.35rem; }
+.stat-pill .value { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 700; color: var(--text); line-height: 1; }
+.stat-pill .sub   { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+.saga-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 0.8rem; margin-top: 1.5rem; }
+.saga-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem 1.3rem; border-left: 3px solid transparent; }
+.saga-card .saga-num { font-size: 0.63rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); margin-bottom: 0.2rem; }
+.saga-card .saga-name { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--text); }
+.saga-card .saga-range { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+/* ══════════════════════════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════════════════════════ */
+footer {
+  border-top: 1px solid var(--border); padding: 1.5rem 0; margin-top: 3rem;
+}
+footer .inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+footer span { font-size: 0.75rem; color: var(--text-faint); }
+
+/* ── Animations ─────────────────────────────────────────────── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+.fade-up { animation: fadeUp 0.4s ease forwards; }
+
