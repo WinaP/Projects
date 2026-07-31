@@ -16,7 +16,7 @@ const TYPE_LABEL = {
 
 const TECH_TAG = {
   // Programming
-  'C':             '<span class="tag">C</span>',
+  'C/C++':         '<span class="tag">C/C++</span>',
   'Python':        '<span class="tag">Python</span>',
   'JavaScript':    '<span class="tag">JavaScript</span>',
   'HTML':          '<span class="tag">HTML</span>',
