@@ -21,49 +21,6 @@ const TYPE_COLOR = {
   'mechanical': '#F6AD55'
 };
 
-const TECH_TAG = {
-  // Programming
-  'C/C++': '<span class="tag">C/C++</span>',
-  'Python': '<span class="tag">Python</span>',
-  'JavaScript': '<span class="tag">JavaScript</span>',
-  'HTML': '<span class="tag">HTML</span>',
-  'CSS': '<span class="tag">CSS</span>',
-  'SQL': '<span class="tag">SQL</span>',
-  'VHDL': '<span class="tag">VHDL</span>',
-  'MATLAB': '<span class="tag">MATLAB</span>',
-  'Simscape': '<span class="tag">Simscape</span>',
-  'PLC Programming': '<span class="tag">PLC Programming</span>',
-
-  // Web / Cloud
-  'Google Firebase': '<span class="tag">Firebase</span>',
-
-  // Embedded / Electronics
-  'Arduino': '<span class="tag">Arduino</span>',
-  'KiCad': '<span class="tag">KiCad</span>',
-  'LTspice': '<span class="tag">LTspice</span>',
-  'PCB Design': '<span class="tag">PCB Design</span>',
-  'Soldering': '<span class="tag">Soldering</span>',
-
-  // Mechanical
-  '3D CAD': '<span class="tag">3D CAD</span>',
-  'Engineering Drawing': '<span class="tag">Engineering Drawing</span>',
-  'Milling': '<span class="tag">Milling</span>',
-  'Lathe': '<span class="tag">Lathe</span>',
-  'CNC Machining': '<span class="tag">CNC Machining</span>',
-  'Welding': '<span class="tag">Welding</span>',
-  'Machining': '<span class="tag">Machining</span>',
-
-  // Analysis / Methods
-  'Circuit Simulation': '<span class="tag">Circuit Simulation</span>',
-  'Matrix Operations': '<span class="tag">Matrix Operations</span>',
-  'Image Processing': '<span class="tag">Image Processing</span>',
-  'Signal Processing': '<span class="tag">Signal Processing</span>',
-  'Prototyping': '<span class="tag">Prototyping</span>',
-  'Testing': '<span class="tag">Testing</span>',
-  'Structural Analysis': '<span class="tag">Structural Analysis</span>',
-  'Machine Learning': '<span class="tag">Machine Learning</span>'
-};
-
 let ALL_PROJECTS = {};
 
 
@@ -81,6 +38,10 @@ fetch('../data/projects.json')
     wireDetailClose();
   });
 
+// ── Technology Tag Generator ─────────────────────────────────
+function createTechTag(technology) {
+  return `<span class="tag">${technology}</span>`;
+}
 
 // ── Card grid ─────────────────────────────────────────────────
 
@@ -176,7 +137,7 @@ function buildCards(filter) {
 
         ${
           (project.technologies || [])
-          .map(t => TECH_TAG[t] || '')
+          .map(t => createTechTag(t))
           .join('')
         }
 
@@ -220,7 +181,7 @@ function openDetail(project) {
 
   const techHTML =
     (project.technologies || [])
-    .map(t => TECH_TAG[t] || '')
+    .map(t => createTechTag(t))
     .join('');
 
 
