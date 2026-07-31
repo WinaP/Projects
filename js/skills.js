@@ -18,7 +18,8 @@ function getSortedSkills(skillGroups) {
       allSkills.push({
         ...skill,
         type: group.type,
-        color: group.color
+        categoryColor: group.color,
+        proficiencyColor: getProficiencyColor(skill.proficiency)
       });
     });
   });
@@ -43,7 +44,7 @@ function buildSkills(skillGroups) {
 
   allSkills.forEach(skill => {
     html += `
-      <div class="skill-item" style="--skill-color:${skill.color}">
+      <div class="skill-item" style="--skill-color:${skill.proficiencyColor}">
         <div class="skill-type">
           ${skill.type}
         </div>
@@ -62,7 +63,7 @@ function buildSkills(skillGroups) {
             <div class="proficiency-bar">
               <div
                 class="proficiency-fill"
-                style="width:${skill.proficiency}%;background:${getProficiencyColor(skill.proficiency)}">
+                style="width:${skill.proficiency}%;background:${skill.proficiencyColor}">
               </div>
             </div>
           </div>
@@ -127,7 +128,7 @@ function buildProficiencyChart(skillGroups) {
       pad.top + chartH - barH;
 
     // bar background
-    ctx.fillStyle = skill.color + "33";
+    ctx.fillStyle = skill.proficiencyColor + "33";
     ctx.fillRect(
       x + 4,
       y,
@@ -136,7 +137,7 @@ function buildProficiencyChart(skillGroups) {
     );
 
     // top highlight
-    ctx.fillStyle = skill.color;
+    ctx.fillStyle = skill.proficiencyColor;
     ctx.fillRect(
       x + 4,
       y,
