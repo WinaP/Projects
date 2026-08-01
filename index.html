@@ -6,16 +6,6 @@
   <title>Project Portfolio — Overview</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
-<script>
-  const menuToggle =
-  document.getElementById("menu-toggle");
-  const navMenu =
-  document.getElementById("nav-menu");
-  menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
-  });
-</script>
   
 <body data-page="overview">
 
@@ -30,7 +20,7 @@
       ☰
     </button>
 
-    <nav id="nav-menu">
+    <nav class="mobile-menu" id="nav-menu">
       <a href="index.html" class="active">Overview</a>
       <a href="pages/projects.html">Projects</a>
       <a href="pages/skills.html">Skills</a>
@@ -88,6 +78,15 @@
 }
 .quick-link:hover { border-color:var(--border-hover); color:var(--text); }
 </style>
+
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.onclick = () => {
+  navMenu.classList.toggle("open");
+};
+</script>
 
 </body>
 </html>
