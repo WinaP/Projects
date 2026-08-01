@@ -256,7 +256,7 @@ a { color: inherit; text-decoration: none; }
   width: min(430px, 100vw); height: calc(100vh - 60px);
   background: var(--bg); border-left: 1px solid var(--border);
   overflow-y: auto; overscroll-behavior: contain; 
-  -webkit-overflow-scrolling: touch; z-index: 90;
+  -webkit-overflow-scrolling: touch; z-index: 1000;
   transform: translateX(100%);
   transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
   padding: 2rem 1.5rem;
@@ -499,6 +499,68 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
   .stat-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   DESKTOP PROJECT MODAL
+   ══════════════════════════════════════════════════════════════ */
+@media (min-width: 769px) {
+
+  #project-detail {
+    top: 50%;
+    left: 50%;
+    right: auto;
+
+    width: min(90vw, 600px);
+    height: auto;
+    max-height: 80vh;
+
+    padding: 2rem;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    transform: translate(-50%, -45%);
+
+    opacity: 0;
+    pointer-events: none;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+  }
+
+
+  #project-detail.open {
+    transform: translate(-50%, -50%);
+
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
+  /* dark blurred background */
+  body.detail-open::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.45);
+
+    backdrop-filter: blur(5px);
+
+    z-index: 900;
+  }
+
+
+  /* blur page behind modal */
+  body.detail-open main,
+  body.detail-open header,
+  body.detail-open footer {
+    filter: blur(5px);
+    transition: filter 0.25s ease;
+  }
+
 }
 
 /* ══════════════════════════════════════════════════════════════
