@@ -240,3 +240,157 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
 @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
 .fade-up { animation: fadeUp 0.4s ease forwards; }
 
+
+/* ============================================================
+   MOBILE RESPONSIVENESS
+   ============================================================ */
+
+@media (max-width: 768px) {
+  /* Prevent horizontal scrolling */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* ── Container spacing ─────────────────────────────────── */
+  .container {
+    padding: 0 1rem;
+  }
+
+  .page-wrap {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  /* ── Mobile navigation ─────────────────────────────────── */
+  #site-header {
+    height: auto;
+    min-height: 60px;
+    padding: 0.7rem 0;
+  }
+
+  #site-header .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+  }
+
+  #site-header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
+  }
+
+  #site-header nav a {
+    flex: 1;
+    text-align: center;
+    padding: 0.45rem 0.3rem;
+    font-size: 0.75rem;
+  }
+
+  /* ── Typography ────────────────────────────────────────── */
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 1.6rem; }
+  p { font-size: 0.88rem; }
+
+   /* ── Overview hero ─────────────────────────────────────── */
+  .my-glow {
+    width: 350px;
+    height: 250px;
+  }
+
+  .my-title {
+    font-size: 2.8rem;
+  }
+
+  /* ── Projects grid ─────────────────────────────────────── */
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  /* ── Filters ───────────────────────────────────────────── */
+  .filter-bar {
+    gap: 0.35rem;
+  }
+
+  .filter-bar button {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  /* ── Detail panel ──────────────────────────────────────── */
+  #project-detail {
+    width: 100vw;
+    top: 100px;
+    height: calc(100vh - 100px);
+    padding: 1.5rem 1rem;
+  }
+
+  /* ── Skills chart ──────────────────────────────────────── */
+  .skill-chart-sticky {
+    position: relative;
+    top: 0;
+  }
+
+  #proficiency-chart {
+    height: 220px;
+  }
+
+  /* ── Skills timeline ──────────────────────────────────── */
+  .skill-timeline::before {
+    left: 10px;
+  }
+
+  .skill-item {
+    display: block;
+    padding-left: 2rem;
+  }
+
+  .skill-item::before {
+    left: 6px;
+  }
+
+  .skill-category {
+    text-align: left;
+    padding-bottom: 0.3rem;
+  }
+
+  .skill-body {
+    padding-left: 0;
+  }
+
+  /* ── Footer ───────────────────────────────────────────── */
+  footer .inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 420px) {
+  .container {
+    padding: 0 0.8rem;
+  }
+
+  #site-header nav a {
+    font-size: 0.68rem;
+  }
+
+  .filter-bar button {
+    width: calc(50% - 0.35rem);
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+}
