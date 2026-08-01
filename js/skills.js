@@ -147,7 +147,10 @@ function buildProficiencyChart(skillGroups) {
 
     // percentage
     ctx.fillStyle = "rgba(240,235,228,0.7)";
-    ctx.font = "10px DM Sans";
+    
+    const isMobile = window.innerWidth <= 768;
+    ctx.font = isMobile ? "8px DM Sans" : "10px DM Sans";
+    
     ctx.textAlign = "center";
     ctx.fillText(
       skill.proficiency + "%",
@@ -156,30 +159,37 @@ function buildProficiencyChart(skillGroups) {
     );
 
     // horizontal skill label
-    ctx.fillStyle = "rgba(160,160,170,0.8)";
-    ctx.font = "9px DM Sans";
-    ctx.textAlign = "center";
-    // split long names into two lines
-    const words = skill.name.split(" ");
-    const midpoint =
-      Math.ceil(words.length / 2);
-    const line1 =
-      words.slice(0, midpoint).join(" ");
-    const line2 =
-      words.slice(midpoint).join(" ");
-
-    ctx.fillText(
-      line1,
-      x + barW / 2,
-      H - 25
-    );
-
-    if (line2) {
+    const isMobile = window.innerWidth <= 768;
+    
+    if (!isMobile) {
+      ctx.fillStyle = "rgba(160,160,170,0.8)";
+      ctx.font = "9px DM Sans";
+      ctx.textAlign = "center";
+    
+      // split long names into two lines
+      const words = skill.name.split(" ");
+      const midpoint =
+        Math.ceil(words.length / 2);
+    
+      const line1 =
+        words.slice(0, midpoint).join(" ");
+    
+      const line2 =
+        words.slice(midpoint).join(" ");
+    
       ctx.fillText(
-        line2,
+        line1,
         x + barW / 2,
-        H - 12
+        H - 25
       );
+    
+      if (line2) {
+        ctx.fillText(
+          line2,
+          x + barW / 2,
+          H - 12
+        );
+      }
     }
   });
 
@@ -201,3 +211,12 @@ function buildProficiencyChart(skillGroups) {
 
   ctx.stroke();
 }
+
+// For when window changes after drawing
+window.addEventListener("resize", () => {
+  fetch('../data/skills.json')
+    .then(r => r.json())
+    .then(skills => {
+      buildProficiencyChart(skills);
+    });
+});
