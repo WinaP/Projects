@@ -604,5 +604,22 @@ body.light .moon {
   }
 }
 
+/* ══════════════════════════════════════════════════════════════
+   ICONS STYLE
+   ══════════════════════════════════════════════════════════════ */
+.social-links {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
 
+.social-links a {
+  color: var(--text-muted);
+  font-size: 1.3rem;
+  transition: var(--transition);
+}
 
+.social-links a:hover {
+  color: var(--text);
+  transform: translateY(-2px);
+}
