@@ -220,14 +220,12 @@ a { color: inherit; text-decoration: none; }
   width: min(430px, 100vw); height: calc(100vh - 60px);
   background: #0b0a0e; border-left: 1px solid var(--border);
   overflow-y: auto; overscroll-behavior: contain; 
-  overscroll-behavior-y: contain;
-  -webkit-overflow-scrolling: touch; z-index: 110;
+  -webkit-overflow-scrolling: touch; z-index: 90;
   transform: translateX(100%);
   transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
   padding: 2rem 1.5rem;
 }
 #project-detail.open { transform: translateX(0); }
-body.detail-open { overflow: hidden; }
 .detail-close {
   position: absolute; top: 1rem; right: 1rem;
   background: var(--bg-hover); border: 1px solid var(--border);
@@ -358,6 +356,8 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
      background: var(--bg-hover);
      color: var(--text);
    }
+
+   body.detail-open { overflow: hidden; position: fixed; width: 100%; }
 
   /* ── Typography ────────────────────────────────────────── */
   h1 { font-size: 2.4rem; }
