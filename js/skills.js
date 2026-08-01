@@ -224,3 +224,9 @@ window.addEventListener("resize", () => {
     buildProficiencyChart(SKILL_CACHE);
   }
 });
+
+window.addEventListener("themeChanged", () => {
+    if (SKILL_CACHE.length) {
+        buildProficiencyChart(SKILL_CACHE);
+    }
+});
