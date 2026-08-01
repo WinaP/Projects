@@ -408,9 +408,8 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
 
   /* ── Skills chart ──────────────────────────────────────── */
   .skill-chart-sticky {
-     position: sticky;
-     top: 70px;
-     z-index: 50;
+     position: relative;
+     top: 0;
    }
 
   #proficiency-chart {
