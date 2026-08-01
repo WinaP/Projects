@@ -595,7 +595,6 @@ body.light .moon {
   }
 
   .hero-text {
-    padding-left: 2rem; /* keep the indentation */
     text-align: left;   /* keep text on the left */
   }
 
