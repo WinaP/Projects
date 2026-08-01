@@ -98,6 +98,12 @@ function getProficiencyColor(value) {
 function buildProficiencyChart(skillGroups) {
   const allSkills = getSortedSkills(skillGroups);
 
+  const styles = getComputedStyle(document.body);
+  
+  const textColor = styles.getPropertyValue("--text").trim();
+  const faintColor = styles.getPropertyValue("--text-faint").trim();
+  const borderColor = styles.getPropertyValue("--border").trim();
+
   const canvas = document.getElementById("proficiency-chart");
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
@@ -151,7 +157,7 @@ function buildProficiencyChart(skillGroups) {
     const isMobile = window.innerWidth <= 768;
     
     // percentage
-    ctx.fillStyle = "rgba(240,235,228,0.7)";
+    ctx.fillStyle = textColor;
     ctx.font = isMobile ? "8px DM Sans" : "10px DM Sans";
     
     ctx.textAlign = "center";
@@ -163,7 +169,7 @@ function buildProficiencyChart(skillGroups) {
     
     // horizontal skill label
     if (!isMobile) {
-      ctx.fillStyle = "rgba(160,160,170,0.8)";
+      ctx.fillStyle = faintColor;
       ctx.font = "9px DM Sans";
       ctx.textAlign = "center";
     
@@ -207,8 +213,7 @@ function buildProficiencyChart(skillGroups) {
     pad.top + chartH
   );
 
-  ctx.strokeStyle =
-    "rgba(255,255,255,0.06)";
+  ctx.strokeStyle = borderColor;
 
   ctx.stroke();
 }
