@@ -591,11 +591,17 @@ body.light .moon {
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+  }
+
+  .hero-text {
+    padding-left: 2rem; /* keep the indentation */
+    text-align: left;   /* keep text on the left */
   }
 
   .hero-image {
     order: 1;
+    align-self: center; /* keeps only the cat centered */
   }
 }
 
