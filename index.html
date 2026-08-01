@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
   
-<body data-page="overview">
+<body data-page="overview" class="dark">
 
 <header id="site-header">
   <div class="container inner">
@@ -78,6 +78,11 @@
 }
 .quick-link:hover { border-color:var(--border-hover); color:var(--text); }
 </style>
+
+<button id="theme-toggle" aria-label="Toggle theme">
+  <span class="moon">🌙</span>
+  <span class="sun">☀️</span>
+</button>
 
 <script>
 const menuToggle = document.getElementById("menu-toggle");
