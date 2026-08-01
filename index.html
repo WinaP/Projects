@@ -80,8 +80,7 @@
 </style>
 
 <button id="theme-toggle" aria-label="Toggle theme">
-  <span class="moon">🌙</span>
-  <span class="sun">☀️</span>
+    🌙
 </button>
 
 <script>
@@ -91,6 +90,29 @@ const navMenu = document.getElementById("nav-menu");
 menuToggle.addEventListener("click", function() {
   navMenu.style.display =
     navMenu.style.display === "flex" ? "none" : "flex";
+});
+
+const body = document.body;
+const button = document.getElementById("theme-toggle");
+
+const savedTheme = localStorage.getItem("theme") || "dark";
+
+body.classList.remove("light", "dark");
+body.classList.add(savedTheme);
+
+button.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+
+button.addEventListener("click", () => {
+    const newTheme = body.classList.contains("dark")
+        ? "light"
+        : "dark";
+
+    body.classList.remove("light", "dark");
+    body.classList.add(newTheme);
+
+    localStorage.setItem("theme", newTheme);
+
+    button.textContent = newTheme === "dark" ? "☀️" : "🌙";
 });
 </script>
 
