@@ -557,3 +557,47 @@ body.light .sun {
 body.light .moon {
     opacity: 0;
 }
+
+/* ══════════════════════════════════════════════════════════════
+   IMAGE STYLE
+   ══════════════════════════════════════════════════════════════ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  position: relative;
+  padding: 0 0 2.5rem;
+  overflow: hidden;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex-shrink: 0;
+}
+
+.hero-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    order: 1;
+  }
+}
+
+
+
