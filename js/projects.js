@@ -38,11 +38,6 @@ fetch('../data/projects.json')
     wireDetailClose();
   });
 
-// ── Technology Tag Generator ─────────────────────────────────
-function createTechTag(technology) {
-  return `<span class="tag">${technology}</span>`;
-}
-
 // ── Card grid ─────────────────────────────────────────────────
 
 function buildCards(filter) {
@@ -137,7 +132,7 @@ function buildCards(filter) {
 
         ${
           (project.technologies || [])
-          .map(t => createTechTag(t))
+          .map(t => `<span class="tag">${t}</span>`)
           .join('')
         }
 
@@ -181,7 +176,7 @@ function openDetail(project) {
 
   const techHTML =
     (project.technologies || [])
-    .map(t => createTechTag(t))
+    .map(t => `<span class="tag">${t}</span>`)
     .join('');
 
 
