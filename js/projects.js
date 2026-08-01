@@ -3,7 +3,7 @@
 // ============================================================
 
 const CATEGORY_LABEL = {
-  'university': 'University',
+  'university': 'Course Work',
   'personal': 'Personal',
 };
 
