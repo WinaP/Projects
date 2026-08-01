@@ -83,9 +83,10 @@
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 
-menuToggle.onclick = () => {
-  navMenu.classList.toggle("open");
-};
+menuToggle.addEventListener("click", function() {
+  navMenu.style.display =
+    navMenu.style.display === "flex" ? "none" : "flex";
+});
 </script>
 
 </body>
