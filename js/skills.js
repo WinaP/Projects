@@ -2,9 +2,12 @@
 //  skills.js — logic for pages/skills.html
 // ============================================================
 
+let SKILL_CACHE = [];
+
 fetch('../data/skills.json')
   .then(r => r.json())
   .then(skills => {
+    SKILL_CACHE = skills;
     buildSkills(skills);
     buildProficiencyChart(skills);
   });
@@ -145,10 +148,10 @@ function buildProficiencyChart(skillGroups) {
       3
     );
 
+    const isMobile = window.innerWidth <= 768;
+    
     // percentage
     ctx.fillStyle = "rgba(240,235,228,0.7)";
-    
-    const isMobile = window.innerWidth <= 768;
     ctx.font = isMobile ? "8px DM Sans" : "10px DM Sans";
     
     ctx.textAlign = "center";
@@ -157,10 +160,8 @@ function buildProficiencyChart(skillGroups) {
       x + barW / 2,
       y - 6
     );
-
-    // horizontal skill label
-    const isMobile = window.innerWidth <= 768;
     
+    // horizontal skill label
     if (!isMobile) {
       ctx.fillStyle = "rgba(160,160,170,0.8)";
       ctx.font = "9px DM Sans";
@@ -214,9 +215,7 @@ function buildProficiencyChart(skillGroups) {
 
 // For when window changes after drawing
 window.addEventListener("resize", () => {
-  fetch('../data/skills.json')
-    .then(r => r.json())
-    .then(skills => {
-      buildProficiencyChart(skills);
-    });
+  if (SKILL_CACHE.length) {
+    buildProficiencyChart(SKILL_CACHE);
+  }
 });
