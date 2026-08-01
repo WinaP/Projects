@@ -137,7 +137,7 @@ a { color: inherit; text-decoration: none; }
 
 /* Mobile dropdown */
 .mobile-menu {
-  display:flex;
+  display:none;
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -219,7 +219,7 @@ a { color: inherit; text-decoration: none; }
   position: fixed; right: 0; top: 60px;
   width: min(430px, 100vw); height: calc(100vh - 60px);
   background: #0b0a0e; border-left: 1px solid var(--border);
-  overflow-y: auto; z-index: 90;
+  overflow-y: auto; overscroll-behavior: contain; z-index: 90;
   transform: translateX(100%);
   transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
   padding: 2rem 1.5rem;
@@ -356,6 +356,10 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
      color: var(--text);
    }
 
+   body.detail-open {
+     overflow: hidden;
+   }
+
   /* ── Typography ────────────────────────────────────────── */
   h1 { font-size: 2.4rem; }
   h2 { font-size: 1.6rem; }
@@ -393,12 +397,15 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
   }
 
   /* ── Detail panel ──────────────────────────────────────── */
-  #project-detail {
-    width: 100vw;
-    top: 100px;
-    height: calc(100vh - 100px);
-    padding: 1.5rem 1rem;
-  }
+   #project-detail {
+     width: 100vw;
+     top: 60px;
+     height: calc(100vh - 60px);
+     padding: 1.5rem 1rem;
+     border-left: none;
+     overflow-y: auto;
+     overscroll-behavior: contain;
+   }
 
   /* ── Skills chart ──────────────────────────────────────── */
   .skill-chart-sticky {
