@@ -16,7 +16,6 @@ projectsportfolio/
 ├── pages/
 │   ├── projects.html            ← Project showcase and details
 │   ├── skills.html              ← Skills and proficiency 
-│   ├── contact.html             ← Contact information and form
 │
 ├── css/
 │   └── style.css                ← All styles
@@ -24,12 +23,10 @@ projectsportfolio/
 ├── data/                        ← ✏️  Edit these files to update content
 │   ├── projects.json            ← Project information and descriptions
 │   ├── skills.json              ← Skills and technologies
-│   ├── experience.json          ← Timeline and achievements
 │
 └── js/
     ├── projects.js              ← Logic for projects.html
     ├── skills.js                 ← Logic for skills.html
-    ├── contact.js               ← Logic for contact.html
 ```
 
 Each HTML page is pure markup — it `<link>`s one CSS file and `<script>`s one JS file.  
@@ -44,14 +41,26 @@ All data lives in JSON. No build step, no dependencies, no modules.
 ```json
 {
   "id": "project_name",
-  "title": "Project Title",
-  "description": "Short project overview.",
-  "technologies": [
-    "HTML",
-    "CSS",
-    "JavaScript"
+  "name": "Project Title",
+  "subtitle": "Short project description",
+  "category": "university/personal",
+  "type": [
+    "web/software/mechanical/electrical"
   ],
-  "image" : "project-image.png"
+  "color": "#9F7AEA",
+  "year": Year,
+  "description": "Detailed project overview.",
+  "technologies": [
+    "Tech 1",
+    "Tech 2"
+  ],
+  "tools": "Development tools used",
+  "features": [
+    "Feature one",
+    "Feature two"
+  ],
+  "github": null,
+  "demo": null
 }
 ```
 
@@ -59,23 +68,17 @@ All data lives in JSON. No build step, no dependencies, no modules.
 
 ```json
 {
-  "category": "Frontend",
+  "id": "web/electrical/software/mechanical",
+  "type": "Web/electrical/software/mechanical",
+  "color": TYPE_COLOR,
   "skills": [
-    "HTML",
-    "CSS",
-    "JavaScript"
+    {
+      "id": "skill",
+      "name": "SKILL",
+      "summary": "Summary of Skill.",
+      "proficiency": Proficiency
+    }
   ]
-}
-```
-
-### Add experience — `data/experience.json`
-
-```json
-{
-  "title": "Role or Achievement",
-  "organisation": "Organisation Name",
-  "date": "2026",
-  "description": "Summary of responsibilities or outcomes."
 }
 ```
 
