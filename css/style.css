@@ -508,3 +508,60 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
     grid-template-columns: 1fr;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   STYLE TOGGLE
+   ══════════════════════════════════════════════════════════════ */
+
+#theme-toggle {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    background: var(--bg-card);
+    color: var(--text);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 24px var(--shadow);
+    transition: var(--transition);
+
+    z-index: 1000;
+}
+
+#theme-toggle:hover {
+    background: var(--bg-hover);
+    transform: translateY(-2px);
+}
+
+#theme-toggle .sun,
+#theme-toggle .moon {
+    position: absolute;
+    transition: opacity .2s ease;
+}
+
+body.dark .sun {
+    opacity: 0;
+}
+
+body.dark .moon {
+    opacity: 1;
+}
+
+body.light .sun {
+    opacity: 1;
+}
+
+body.light .moon {
+    opacity: 0;
+}
