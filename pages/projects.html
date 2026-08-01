@@ -6,16 +6,36 @@
   <title>Project Portfolio — Projects</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
+<script>
+const menuToggle =
+document.getElementById("menu-toggle");
+const navMenu =
+document.getElementById("nav-menu");
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
+</script>
+
 <body data-page="projects">
 
 <header id="site-header">
   <div class="container inner">
-    <a href="../index.html" class="brand">✦ Project Portfolio ✦</a>
-    <nav>
+
+    <a href="../index.html" class="brand">
+      ✦ Project Portfolio ✦
+    </a>
+
+    <button class="menu-toggle" id="menu-toggle">
+      ☰
+    </button>
+
+    <nav id="nav-menu">
       <a href="../index.html">Overview</a>
       <a href="projects.html" class="active">Projects</a>
       <a href="skills.html">Skills</a>
     </nav>
+
   </div>
 </header>
 
