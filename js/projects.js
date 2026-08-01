@@ -382,6 +382,14 @@ function openDetail(project) {
 
 }
 
+function closeDetail() {
+  document
+    .getElementById('project-detail')
+    .classList.remove('open');
+
+  document.body.classList.remove('detail-open');
+}
+
 
 
 // ── Filters ───────────────────────────────────────────────────
@@ -422,22 +430,38 @@ function wireFilters() {
 
 
 // ── Close detail panel ────────────────────────────────────────
-
 function wireDetailClose() {
 
-
+  // X button
   document
     .getElementById('detail-close')
-    .addEventListener('click', () => {
+    .addEventListener('click', closeDetail);
 
+  // ESC key
+  document.addEventListener('keydown', (e) => {
+    if (
+      e.key === 'Escape' &&
+      document.getElementById('project-detail').classList.contains('open')
+    ) {
+      closeDetail();
+    }
+  });
 
-      document
-        .getElementById('project-detail')
-        .classList.remove('open');
-      
-      document.body.classList.remove('detail-open');
+  // Click outside modal (desktop only)
+  document.addEventListener('click', (e) => {
 
+    if (window.innerWidth <= 768) return;
 
-    });
+    const detail = document.getElementById('project-detail');
+
+    if (
+      detail.classList.contains('open') &&
+      !detail.contains(e.target) &&
+      !e.target.closest('.project-card')
+    ) {
+      closeDetail();
+    }
+
+  });
 
 }
