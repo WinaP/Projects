@@ -607,10 +607,12 @@ body.light .moon {
 /* ══════════════════════════════════════════════════════════════
    ICONS STYLE
    ══════════════════════════════════════════════════════════════ */
+
 .social-links {
   display: flex;
   gap: 1.2rem;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .social-links a {
@@ -622,4 +624,30 @@ body.light .moon {
 .social-links a:hover {
   color: var(--text);
   transform: translateY(-2px);
+}
+
+footer .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* Keep footer horizontal on mobile */
+@media (max-width: 768px) {
+  footer .inner {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  footer .inner span {
+    white-space: nowrap;
+  }
+
+  .social-links {
+    gap: 0.8rem;
+  }
 }
