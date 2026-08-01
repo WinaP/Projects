@@ -377,6 +377,8 @@ function openDetail(project) {
   document
     .getElementById('project-detail')
     .classList.add('open');
+  
+  document.body.classList.add('detail-open');
 
 }
 
@@ -432,6 +434,8 @@ function wireDetailClose() {
       document
         .getElementById('project-detail')
         .classList.remove('open');
+      
+      document.body.classList.remove('detail-open');
 
 
     });
