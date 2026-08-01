@@ -7,16 +7,6 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<script>
-const menuToggle =
-document.getElementById("menu-toggle");
-const navMenu =
-document.getElementById("nav-menu");
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("open");
-});
-</script>
-
 <body data-page="projects">
 
 <header id="site-header">
@@ -30,7 +20,7 @@ menuToggle.addEventListener("click", () => {
       ☰
     </button>
 
-    <nav id="nav-menu">
+    <nav id="mobile-menu">
       <a href="../index.html">Overview</a>
       <a href="projects.html" class="active">Projects</a>
       <a href="skills.html">Skills</a>
@@ -76,6 +66,16 @@ menuToggle.addEventListener("click", () => {
     <span>31/07/2026</span>
   </div>
 </footer>
+
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", function() {
+  navMenu.style.display =
+    navMenu.style.display === "flex" ? "none" : "flex";
+});
+</script>
 
 <script src="../js/projects.js"></script>
 
