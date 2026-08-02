@@ -505,7 +505,7 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
    TABLET RESPONSIVENESS
    ============================================================ */
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1299px) {
    #site-header nav a {
       padding: .35rem .65rem;
       font-size: .78rem;
@@ -571,7 +571,7 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
 /* ══════════════════════════════════════════════════════════════
    DESKTOP PROJECT MODAL
    ══════════════════════════════════════════════════════════════ */
-@media (min-width: 1024px) {
+@media (min-width: 1300px) {
 
   #project-detail {
     top: 50%;
