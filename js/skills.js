@@ -3,13 +3,14 @@
 // ============================================================
 
 let SKILL_CACHE = [];
+let CURRENT_CATEGORY = "technical";
 
 fetch('../data/skills.json')
   .then(r => r.json())
-  .then(skills => {
-    SKILL_CACHE = skills;
-    buildSkills(skills);
-    buildProficiencyChart(skills);
+  .then(groups => {
+    SKILL_CACHE = groups;
+    refreshSkills();
+    wireSkillToggle();
   });
 
 // ── Get All Skills (Sorted) ──────────────────────────────────
@@ -221,12 +222,56 @@ function buildProficiencyChart(skillGroups) {
 // For when window changes after drawing
 window.addEventListener("resize", () => {
   if (SKILL_CACHE.length) {
-    buildProficiencyChart(SKILL_CACHE);
+    refreshSkills();
   }
 });
 
 window.addEventListener("themeChanged", () => {
-    if (SKILL_CACHE.length) {
-        buildProficiencyChart(SKILL_CACHE);
-    }
+  if (SKILL_CACHE.length) {
+    refreshSkills();
+  }
 });
+
+function getFilteredGroups() {
+
+  return SKILL_CACHE.filter(group =>
+    group.category === CURRENT_CATEGORY
+  );
+
+}
+
+
+function refreshSkills() {
+
+  const groups = getFilteredGroups();
+
+  buildSkills(groups);
+  buildProficiencyChart(groups);
+
+}
+
+function wireSkillToggle(){
+
+    document
+    .querySelectorAll(".skill-toggle button")
+    .forEach(button => {
+
+        button.addEventListener("click",()=>{
+
+            document
+            .querySelectorAll(".skill-toggle button")
+            .forEach(btn =>
+                btn.classList.remove("active")
+            );
+
+            button.classList.add("active");
+
+            CURRENT_CATEGORY = button.dataset.category;
+
+            refreshSkills();
+
+        });
+
+    });
+
+}
