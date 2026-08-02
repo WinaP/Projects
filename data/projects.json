@@ -190,7 +190,7 @@
     "id": "deloitte_hackathon",
     "name": "Deloitte Hackathon",
     "subtitle": "Machine learning concept for energy optimisation",
-    "category": "university",
+    "category": "personal",
     "type": [
       "software"
     ],
@@ -326,7 +326,7 @@
     "id": "disrupt_challenge",
     "name": "Disrupt Challenge Hackathon",
     "subtitle": "Wearable safety technology prototype",
-    "category": "university",
+    "category": "personal",
     "type": [
       "software",
       "electrical"
