@@ -620,10 +620,43 @@ body.light .moon {
     opacity: 0;
 }
 
+/* ══════════════════════════════════════════════════════════════
+   SKILL CATEGORY TOGGLE
+   ══════════════════════════════════════════════════════════════ */
+
 .skill-toggle {
-    display:flex;
-    gap:0.5rem;
-    margin-bottom:1rem;
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.skill-toggle button {
+    padding: 0.35rem 0.9rem;
+
+    border-radius: 20px;
+    border: 1px solid var(--border);
+
+    background: transparent;
+    color: var(--text-muted);
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.skill-toggle button:hover {
+    border-color: var(--border-hover);
+    color: var(--text);
+    background: var(--bg-hover);
+}
+
+.skill-toggle button.active {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-bg);
 }
 
 /* ══════════════════════════════════════════════════════════════
