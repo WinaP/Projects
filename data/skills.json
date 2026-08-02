@@ -119,5 +119,44 @@
         "proficiency": 70
       }
     ]
+  },
+
+  {
+    "id": "soft",
+    "type": "Soft Skills",
+    "color": "#F56565",
+    "skills": [
+      {
+        "id": "teamwork",
+        "name": "Teamwork",
+        "summary": "Collaborating effectively in multidisciplinary engineering teams.",
+        "proficiency": 90
+      },
+      {
+        "id": "communication",
+        "name": "Communication",
+        "summary": "Presenting technical concepts clearly in reports and presentations.",
+        "proficiency": 85
+      },
+      {
+        "id": "problem_solving",
+        "name": "Problem Solving",
+        "summary": "Analysing complex problems and developing practical solutions.",
+        "proficiency": 90
+      },
+      {
+        "id": "time_management",
+        "name": "Time Management",
+        "summary": "Managing multiple projects and meeting deadlines effectively.",
+        "proficiency": 85
+      },
+      {
+        "id": "leadership",
+        "name": "Leadership",
+        "summary": "Supporting team coordination and taking initiative during projects.",
+        "proficiency": 80
+      }
+    ]
   }
+  
 ]
