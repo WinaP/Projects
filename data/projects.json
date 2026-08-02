@@ -170,7 +170,7 @@
       "electrical"
     ],
     "color": "#48BB78",
-    "year": 2024,
+    "year": 2025,
     "description": "Assembled and soldered a microcontroller development board comparable to an Arduino, gaining practical experience in PCB assembly, electronic components, and hardware verification.",
     "technologies": [
       "Soldering"
@@ -181,6 +181,36 @@
       "Electronic component assembly",
       "PCB inspection",
       "Hardware testing"
+    ],
+    "github": null,
+    "demo": null
+  },
+
+  {
+    "id": "cnc_drill",
+    "name": "CNC Drill Machine Assembly",
+    "subtitle": "Mechanical assembly and integration",
+    "category": "university",
+    "type": [
+      "mechanical",
+      "electrical",
+      "software"
+    ],
+    "color": "#38B2AC",
+    "year": 2025,
+    "description": "Assembled a CNC drill machine from supplied mechanical and electronic components. Modelled the complete assembly in 3D CAD and designed custom 3D-printed connecting parts where required to complete the machine.",
+    "technologies": [
+      "3D CAD",
+      "3D Printing",
+      "Mechanical Assembly"
+    ],
+    "tools": "CAD Software, 3D Printer, Hand Tools",
+    "features": [
+      "Complete CNC drill machine assembly",
+      "3D CAD modelling of the full machine",
+      "Custom 3D-printed connecting components",
+      "Mechanical alignment and calibration",
+      "System integration and functional testing"
     ],
     "github": null,
     "demo": null
