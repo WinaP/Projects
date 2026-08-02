@@ -188,7 +188,7 @@
 
   {
     "id": "cnc_drill",
-    "name": "CNC Drill Machine Assembly",
+    "name": "CNC Machine Assembly",
     "subtitle": "Mechanical assembly and integration",
     "category": "university",
     "type": [
@@ -198,7 +198,7 @@
     ],
     "color": "#38B2AC",
     "year": 2025,
-    "description": "Assembled a CNC drill machine from supplied mechanical and electronic components. Modelled the complete assembly in 3D CAD and designed custom 3D-printed connecting parts where required to complete the machine.",
+    "description": "Assembled a CNC machine from supplied mechanical and electronic components. Modelled the complete assembly in 3D CAD and designed custom 3D-printed connecting parts where required to complete the machine.",
     "technologies": [
       "3D CAD",
       "3D Printing",
