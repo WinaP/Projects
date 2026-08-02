@@ -234,7 +234,7 @@ a { color: inherit; text-decoration: none; }
 .filter-bar button:hover { border-color: var(--border-hover); color: var(--text); }
 .filter-bar button.active { border-color: var(--accent); color: var(--accent); background: var(--accent-bg);}
 
-.project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 1rem; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1rem; }
 .project-card {
   background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 1.25rem; cursor: pointer; transition: var(--transition); position: relative; overflow: hidden;
@@ -505,21 +505,30 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
    TABLET RESPONSIVENESS
    ============================================================ */
 
-@media (min-width: 769px) and (max-width: 1023px) {
-
+@media (min-width: 768px) and (max-width: 1023px) {
+   #site-header nav a {
+      padding: .35rem .65rem;
+      font-size: .78rem;
+   }
+   
   .container {
-    padding: 0 1.5rem;
+     padding: 0 1.5rem;
   }
 
   /* Hero */
   .hero {
-    gap: 2rem;
+     gap: 1.5rem;
+     justify-content: center;
   }
-
-  .hero-image img {
-    width: 200px;
-    height: 200px;
-  }
+   
+   .hero-text {
+      flex: 1;
+   }
+   
+   .hero-image img {
+      width: 180px;
+      height: 180px;
+   }
 
   /* Projects */
   .project-grid {
@@ -555,7 +564,7 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
   }
 
   footer .inner {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 }
 
