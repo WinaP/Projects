@@ -234,7 +234,7 @@ a { color: inherit; text-decoration: none; }
 .filter-bar button:hover { border-color: var(--border-hover); color: var(--text); }
 .filter-bar button.active { border-color: var(--accent); color: var(--accent); background: var(--accent-bg);}
 
-.project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); gap: 1rem; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 1rem; }
 .project-card {
   background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 1.25rem; cursor: pointer; transition: var(--transition); position: relative; overflow: hidden;
@@ -320,7 +320,7 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
    MOBILE RESPONSIVENESS
    ============================================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* Prevent horizontal scrolling */
   html {
     overflow-x: hidden;
@@ -501,10 +501,68 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
   }
 }
 
+/* ============================================================
+   TABLET RESPONSIVENESS
+   ============================================================ */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  /* Hero */
+  .hero {
+    gap: 2rem;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Projects */
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Stats */
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .saga-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Skills */
+  .skill-item {
+    grid-template-columns: 70px 1fr;
+    gap: 1rem;
+  }
+
+  .skill-timeline::before {
+    left: 70px;
+  }
+
+  .skill-item::before {
+    left: 66px;
+  }
+
+  /* Project detail stays as drawer */
+  #project-detail {
+    width: 420px;
+  }
+
+  footer .inner {
+    flex-wrap: wrap;
+  }
+}
+
 /* ══════════════════════════════════════════════════════════════
    DESKTOP PROJECT MODAL
    ══════════════════════════════════════════════════════════════ */
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
 
   #project-detail {
     top: 50%;
@@ -689,7 +747,7 @@ body.light .moon {
 }
 
 /* Mobile layout */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hero {
     flex-direction: column;
     align-items: flex-start;
@@ -736,7 +794,7 @@ footer .inner {
 }
 
 /* Keep footer horizontal on mobile */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   footer .inner {
     flex-direction: row;
     flex-wrap: nowrap;
