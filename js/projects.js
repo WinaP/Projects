@@ -470,9 +470,7 @@ function wireDetailClose() {
   
     // Close gallery first
     if (gallery.classList.contains("open")) {
-  
-      gallery.classList.remove("open");
-  
+      closeGallery();
       return;
     }
   
@@ -579,12 +577,25 @@ document
  renderGallery();
 });
 
+function closeGallery() {
+  const video = document.getElementById("gallery-video");
+
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+    video.src = "";
+    video.load();
+  }
+
+  document.getElementById("gallery-media").innerHTML = "";
+
+  document
+    .getElementById("media-gallery")
+    .classList.remove("open");
+}
+
 const galleryClose = document.getElementById("gallery-close");
 
 if (galleryClose) {
-  galleryClose.addEventListener("click", () => {
-    document
-      .getElementById("media-gallery")
-      .classList.remove("open");
-  });
+  galleryClose.addEventListener("click", closeGallery);
 }
