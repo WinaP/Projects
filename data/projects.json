@@ -62,6 +62,10 @@
       "electrical",
       "mechanical"
     ],
+    "media": [
+      "../media/LFR_1.jpeg",
+      "../media/LFR_vid.mp4"
+    ],
     "color": "#38B2AC",
     "year": 2025,
     "description": "Designed, manufactured, and tested an autonomous line following robot integrating custom PCB hardware, embedded programming, and mechanical prototyping.",
@@ -140,6 +144,9 @@
     "type": [
       "mechanical"
     ],
+    "media": [
+      "../media/TAP_1.jpeg"
+    ],
     "color": "#F6AD55",
     "year": 2025,
     "description": "Manufactured a functional tap wrench from raw steel stock using workshop machining processes and engineering drawings.",
@@ -168,6 +175,10 @@
     "category": "university",
     "type": [
       "electrical"
+    ],
+    "media": [
+      "../media/ENEL_1.jpeg",
+      "../media/ENEL_2.jpeg"
     ],
     "color": "#48BB78",
     "year": 2025,
@@ -253,6 +264,12 @@
     "category": "university",
     "type": [
       "mechanical"
+    ],
+    "media": [
+      "../media/ALU_1.jpeg",
+      "../media/ALU_2.jpeg",
+      "../media/ALU_3.jpeg",
+      "../media/ALU_4.jpeg"
     ],
     "color": "#F6AD55",
     "year": 2026,
