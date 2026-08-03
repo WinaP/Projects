@@ -478,6 +478,7 @@ function wireDetailClose() {
     if (
       detail.classList.contains('open') &&
       !detail.contains(e.target) &&
+      !document.getElementById("image-gallery").contains(e.target) &&
       !e.target.closest('.project-card')
     ) {
       closeDetail();
@@ -575,12 +576,12 @@ document
 
 
 
-document
-.getElementById("gallery-close")
-.addEventListener("click",()=>{
+const galleryClose = document.getElementById("gallery-close");
 
- document
- .getElementById("image-gallery")
- .classList.remove("open");
-
-});
+if (galleryClose) {
+  galleryClose.addEventListener("click", () => {
+    document
+      .getElementById("image-gallery")
+      .classList.remove("open");
+  });
+}
