@@ -354,7 +354,7 @@ function openDetail(project) {
 
     
     ${
-     project.images && project.images.length
+     project.media && project.media.length
      ?
      `
      <div class="detail-section">
@@ -363,7 +363,7 @@ function openDetail(project) {
        class="view-images"
        onclick="openGallery('${project.id}')">
     
-          View Pictures →
+          View Gallery →
     
        </button>
     
@@ -508,93 +508,76 @@ function wireDetailClose() {
 
 }
 
-
-// ── Image gallery ────────────────────────────────────────
-
+// ── Image / Video gallery ────────────────────────────────────────
 let galleryProject = null;
 let galleryIndex = 0;
 
-
 function openGallery(id){
-
   galleryProject = ALL_PROJECTS[id];
-
   galleryIndex = 0;
-
   renderGallery();
-
   document
   .getElementById("image-gallery")
   .classList.add("open");
-
 }
-
-
 
 function renderGallery(){
+  const media = galleryProject.media;
+  const container = document.getElementById("gallery-media");
+  container.innerHTML = "";
+  const src = media[galleryIndex];
+  
+  // Video detection
+  if (
+    src.endsWith(".mp4") ||
+    src.endsWith(".webm") ||
+    src.endsWith(".ogg")
+  ){
+    const video = document.createElement("video");
+    video.src = src;
+    video.controls = true;
+    video.autoplay = true;
+    video.loop = true;
+    video.id = "gallery-video";
+    container.appendChild(video);
+  }
 
- const images = galleryProject.images;
+  // Image
+  else {
+    const img = document.createElement("img");
+    img.src = src;
+    img.id = "gallery-image";
+    container.appendChild(img);
+  }
 
- const img =
- document.getElementById("gallery-image");
-
-
- img.src = images[galleryIndex];
-
-
- const dots =
- document.getElementById("gallery-dots");
-
-
- dots.innerHTML="";
-
-
- images.forEach((_,i)=>{
-
-   const dot=document.createElement("span");
-
-   dot.className =
-   "gallery-dot " +
-   (i===galleryIndex ? "active":"");
-
-
-   dots.appendChild(dot);
-
- });
-
+  const dots = document.getElementById("gallery-dots");
+  dots.innerHTML = "";
+  media.forEach((_,i)=>{
+    const dot=document.createElement("span");
+    dot.className =
+    "gallery-dot " +
+    (i===galleryIndex ? "active":"");
+    dots.appendChild(dot);
+  });
 }
-
-
 
 document
 .getElementById("gallery-next")
 .addEventListener("click",()=>{
-
- const images=galleryProject.images;
-
+ const media = galleryProject.media;
  galleryIndex =
- (galleryIndex+1)%images.length;
-
+ (galleryIndex+1)%media.length;
  renderGallery();
-
 });
-
-
 
 document
 .getElementById("gallery-prev")
 .addEventListener("click",()=>{
-
- const images=galleryProject.images;
-
+ const media = galleryProject.media;
  galleryIndex =
- (galleryIndex-1+images.length)%images.length;
-
+ (galleryIndex-1+media.length)%media.length;
  renderGallery();
-
 });
-
-
 
 const galleryClose = document.getElementById("gallery-close");
 
