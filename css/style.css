@@ -501,69 +501,6 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
   }
 }
 
-/* ============================================================
-   TABLET RESPONSIVENESS
-   ============================================================ */
-
-@media (min-width: 768px) and (max-width: 1299px) {
-   #site-header nav a {
-      padding: .35rem .65rem;
-      font-size: .78rem;
-   }
-   
-  .container {
-     padding: 0 1.5rem;
-  }
-
-  /* Hero */
-  .hero {
-     gap: 1.5rem;
-     justify-content: center;
-     padding-top: 2rem;
-  }
-
-   .hero-text {
-      flex: 1;
-   }
-   
-   .hero-image img {
-      width: 180px;
-      height: 180px;
-   }
-
-  /* Projects */
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Stats */
-  .stat-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .saga-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Skills */
-  .skill-item {
-    grid-template-columns: 70px 1fr;
-    gap: 1rem;
-  }
-
-  .skill-timeline::before {
-    left: 70px;
-  }
-
-  .skill-item::before {
-    left: 66px;
-  }
-
-  footer .inner {
-    flex-wrap: nowrap;
-  }
-}
-
 /* ══════════════════════════════════════════════════════════════
    POP UP CARD
    ══════════════════════════════════════════════════════════════ */
