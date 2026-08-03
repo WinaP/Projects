@@ -490,6 +490,8 @@ function wireDetailClose() {
   document.addEventListener('click', (e) => {
 
     if (window.innerWidth <= 768) return;
+    
+    if (e.target.closest('#theme-toggle')) return;
 
     const detail = document.getElementById('project-detail');
 
