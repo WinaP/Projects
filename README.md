@@ -19,6 +19,8 @@ projectsportfolio/
 │
 ├── images/                      ← All images
 │
+├── files/                       ← All files
+│
 ├── css/
 │   └── style.css                ← All styles
 │
