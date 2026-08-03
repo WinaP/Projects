@@ -837,24 +837,6 @@ footer .inner {
   backdrop-filter: blur(5px);
 }
 
-.gallery-card {
-  position: relative;
-
-  width: min(90vw, 900px);
-  height: min(80vh, 700px);
-
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-}
-
 #image-gallery.open {
   display:flex;
 }
