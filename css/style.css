@@ -519,8 +519,9 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
   .hero {
      gap: 1.5rem;
      justify-content: center;
+     padding-top: 2rem;
   }
-   
+
    .hero-text {
       flex: 1;
    }
