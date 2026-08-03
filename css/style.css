@@ -870,26 +870,44 @@ footer .inner {
 
 #gallery-prev,
 #gallery-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  border:1px solid var(--border);
-  background:var(--bg-card);
-  color:var(--text);
-  font-size:1.5rem;
-  cursor:pointer;
+  width: 40px;
+  height: 36px;
+
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+
+  color: var(--text-muted);
+  font-size: 1.2rem;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: var(--transition);
+}
+
+#gallery-prev:hover,
+#gallery-next:hover {
+  color: var(--text);
+  background: var(--bg-card);
+  border-color: var(--border-hover);
+  transform: translateY(-50%) scale(1.05);
 }
 
 #gallery-prev {
-  left:30px;
+  left: 30px;
 }
 
 #gallery-next {
-  right:30px;
+  right: 30px;
 }
 
 #gallery-dots {
