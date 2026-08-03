@@ -657,7 +657,7 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
     box-shadow: 0 8px 24px var(--shadow);
     transition: var(--transition);
 
-    z-index: 1000;
+    z-index: 1200;
 }
 
 #theme-toggle:hover {
