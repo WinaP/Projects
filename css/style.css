@@ -179,7 +179,7 @@ a { color: inherit; text-decoration: none; }
 /* ══════════════════════════════════════════════════════════════
    PAGE WRAPPER
    ══════════════════════════════════════════════════════════════ */
-.page-wrap { padding: 2.5rem 0 5rem; }
+.page-wrap { padding-top: 1.5rem; padding-bottom: 3rem; }
 
 /* ── Page header ────────────────────────────────────────────── */
 .page-header { margin-bottom: 2rem; }
