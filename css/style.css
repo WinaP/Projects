@@ -558,20 +558,15 @@ footer span { font-size: 0.75rem; color: var(--text-faint); }
     left: 66px;
   }
 
-  /* Project detail stays as drawer */
-  #project-detail {
-    width: 420px;
-  }
-
   footer .inner {
     flex-wrap: nowrap;
   }
 }
 
 /* ══════════════════════════════════════════════════════════════
-   DESKTOP PROJECT MODAL
+   POP UP CARD
    ══════════════════════════════════════════════════════════════ */
-@media (min-width: 1300px) {
+@media (min-width: 768px) {
 
   #project-detail {
     top: 50%;
