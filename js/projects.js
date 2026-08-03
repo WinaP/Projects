@@ -352,6 +352,27 @@ function openDetail(project) {
     }
 
 
+    
+    ${
+     project.images && project.images.length
+     ?
+     `
+     <div class="detail-section">
+    
+       <button 
+       class="view-images"
+       onclick="openGallery('${project.id}')">
+    
+          View Pictures →
+    
+       </button>
+    
+     </div>
+     `
+     :
+     ''
+    }
+
 
 
     ${
@@ -465,3 +486,101 @@ function wireDetailClose() {
   });
 
 }
+
+
+// ── Image gallery ────────────────────────────────────────
+
+let galleryProject = null;
+let galleryIndex = 0;
+
+
+function openGallery(id){
+
+  galleryProject = ALL_PROJECTS[id];
+
+  galleryIndex = 0;
+
+  renderGallery();
+
+  document
+  .getElementById("image-gallery")
+  .classList.add("open");
+
+}
+
+
+
+function renderGallery(){
+
+ const images = galleryProject.images;
+
+ const img =
+ document.getElementById("gallery-image");
+
+
+ img.src = images[galleryIndex];
+
+
+ const dots =
+ document.getElementById("gallery-dots");
+
+
+ dots.innerHTML="";
+
+
+ images.forEach((_,i)=>{
+
+   const dot=document.createElement("span");
+
+   dot.className =
+   "gallery-dot " +
+   (i===galleryIndex ? "active":"");
+
+
+   dots.appendChild(dot);
+
+ });
+
+}
+
+
+
+document
+.getElementById("gallery-next")
+.addEventListener("click",()=>{
+
+ const images=galleryProject.images;
+
+ galleryIndex =
+ (galleryIndex+1)%images.length;
+
+ renderGallery();
+
+});
+
+
+
+document
+.getElementById("gallery-prev")
+.addEventListener("click",()=>{
+
+ const images=galleryProject.images;
+
+ galleryIndex =
+ (galleryIndex-1+images.length)%images.length;
+
+ renderGallery();
+
+});
+
+
+
+document
+.getElementById("gallery-close")
+.addEventListener("click",()=>{
+
+ document
+ .getElementById("image-gallery")
+ .classList.remove("open");
+
+});
