@@ -228,7 +228,8 @@
     "year": 2025,
     "description": "Collaborated in a hackathon team to develop a machine learning concept for optimising recreation centre energy usage. Proposed an application that predicts facility occupancy, automatically manages energy consumption during low usage, and provides real-time occupancy updates to users.",
     "technologies": [
-      "Prototyping"
+      "Prototyping",
+      "Concept Generation"
     ],
     "tools": "Presentation Software, Collaborative Design Tools",
     "features": [
@@ -366,7 +367,8 @@
     "description": "Collaborated on the design and prototyping of a wearable safety device for remote workers, combining embedded systems, electronics, and product development.",
     "technologies": [
       "C/C++",
-      "Prototyping"
+      "Prototyping",
+      "Concept Generation"
     ],
     "tools": "Rapid Prototyping Tools, Electronics Equipment",
     "features": [
