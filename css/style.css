@@ -893,10 +893,13 @@ footer .inner {
 }
 
 #gallery-dots {
-  position:absolute;
-  bottom:30px;
-  display:flex;
-  gap:8px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 8px;
 }
 
 .gallery-dot {
