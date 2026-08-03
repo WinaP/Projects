@@ -460,12 +460,30 @@ function wireDetailClose() {
 
   // ESC key
   document.addEventListener('keydown', (e) => {
-    if (
-      e.key === 'Escape' &&
-      document.getElementById('project-detail').classList.contains('open')
-    ) {
-      closeDetail();
+  
+    if (e.key !== 'Escape') return;
+  
+  
+    const gallery = document.getElementById("image-gallery");
+    const detail = document.getElementById("project-detail");
+  
+  
+    // Close gallery first
+    if (gallery.classList.contains("open")) {
+  
+      gallery.classList.remove("open");
+  
+      return;
     }
+  
+  
+    // Otherwise close project detail
+    if (detail.classList.contains("open")) {
+  
+      closeDetail();
+  
+    }
+  
   });
 
   // Click outside modal (desktop only)
