@@ -464,7 +464,7 @@ function wireDetailClose() {
     if (e.key !== 'Escape') return;
   
   
-    const gallery = document.getElementById("image-gallery");
+    const gallery = document.getElementById("media-gallery");
     const detail = document.getElementById("project-detail");
   
   
@@ -498,7 +498,7 @@ function wireDetailClose() {
     if (
       detail.classList.contains('open') &&
       !detail.contains(e.target) &&
-      !document.getElementById("image-gallery").contains(e.target) &&
+      !document.getElementById("media-gallery").contains(e.target) &&
       !e.target.closest('.project-card')
     ) {
       closeDetail();
@@ -508,7 +508,7 @@ function wireDetailClose() {
 
 }
 
-// ── Image / Video gallery ────────────────────────────────────────
+// ── Media gallery ────────────────────────────────────────
 let galleryProject = null;
 let galleryIndex = 0;
 
@@ -517,7 +517,7 @@ function openGallery(id){
   galleryIndex = 0;
   renderGallery();
   document
-  .getElementById("image-gallery")
+  .getElementById("media-gallery")
   .classList.add("open");
 }
 
@@ -584,7 +584,7 @@ const galleryClose = document.getElementById("gallery-close");
 if (galleryClose) {
   galleryClose.addEventListener("click", () => {
     document
-      .getElementById("image-gallery")
+      .getElementById("media-gallery")
       .classList.remove("open");
   });
 }
