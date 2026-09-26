@@ -355,6 +355,10 @@
       "electrical",
       "software"
     ],
+    "media": [
+      "../media/SC_1.jpeg",
+      "../media/SC_2.jpeg"
+    ],
     "color": "#38B2AC",
     "year": 2026,
     "description": "Designed and tested a solar power system integrating photovoltaic analysis, DC motor control, and power electronics.",
