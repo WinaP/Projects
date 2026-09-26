@@ -17,7 +17,7 @@ projectsportfolio/
 │   ├── projects.html            ← Project showcase and details
 │   ├── skills.html              ← Skills and proficiency
 │
-├── images/                      ← All images
+├── media/                      ← All images
 │
 ├── files/                       ← All files
 │
