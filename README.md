@@ -17,20 +17,20 @@ projectsportfolio/
 │   ├── projects.html            ← Project showcase and details
 │   ├── skills.html              ← Skills and proficiency
 │
-├── media/                      ← All images
+├── media/                       ← All images
 │
 ├── files/                       ← All files
 │
 ├── css/
 │   └── style.css                ← All styles
 │
-├── data/                        ← ✏️  Edit these files to update content
+├── data/                        ← ✏️ Edit these files to update content
 │   ├── projects.json            ← Project information and descriptions
 │   ├── skills.json              ← Skills and technologies
 │
 └── js/
     ├── projects.js              ← Logic for projects.html
-    ├── skills.js                 ← Logic for skills.html
+    ├── skills.js                ← Logic for skills.html
 ```
 
 Each HTML page is pure markup — it `<link>`s one CSS file and `<script>`s one JS file.  
